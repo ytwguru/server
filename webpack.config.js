@@ -19,7 +19,7 @@ module.exports = [
         { test : /\.jsx?$/, exclude : /(node_modules)/, loader : "react-hot!babel"},
         { test: /\.modernizrrc$/, loader: "modernizr" },
         { test: /jquery/, loader: 'expose?$!expose?jQuery' },
-        { test: /isotope\-|fizzy\-ui\-utils|desandro\-|masonry|outlayer|get\-size|doc\-ready|eventie|eventemitter/,
+        { test: /cd\-pretty\-photo|jquery\.validate|isotope\-|fizzy\-ui\-utils|desandro\-|masonry|outlayer|get\-size|doc\-ready|eventie|eventemitter/,
           loader: 'imports?define=>false&this=>window' }
       ]
     },
@@ -32,14 +32,18 @@ module.exports = [
       extensions : ["", ".js", ".jsx", ".less", ".css"],
       modulesDirectories: ["node_modules"],
       alias: {
-        modernizr$: "./.modernizrrc"
+        jquery : "jquery/src/jquery",
+        modernizr$: "./.modernizrrc",
+        masonry : "masonry-layout",
+        isotope: 'isotope-layout'
       }
     },
     devtool :"source-map",
     plugins: [
       new CopyWebpackPlugin([
-        { from : "**/*", to: __dirname + '/dist/assets', context: "./app/assets" },
-        { from : "*.html",  context: "./app/" }
+        { from : "./assets/**/*", to : "./", toType: 'dir' },
+        { from : "./app/index.html", to : "./index.html", toType: 'file'  }
+
       ]),
       new webpack.HotModuleReplacementPlugin(),
       new webpack.ProvidePlugin({

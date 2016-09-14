@@ -3,11 +3,11 @@
 import $ from "jquery";
 import jQuery from "jquery";
 import "jquery-validation";
-import "isotope-layout";
+import "supersize";
 
 require("./.modernizrrc");
 require("./app/layout.less");
-
+var Isotope = require("isotope-layout");
 
 var isMobile = false;
 var isDesktop = false;
@@ -658,9 +658,10 @@ $(document).ready(function() {
  | EVENTS TRIGGER AFTER ALL IMAGES ARE LOADED
  |--------------------------------------------------------------------------
  */
+
+
 $(window).on("load", function() {
 
-  "use strict";
   /*
    |--------------------------------------------------------------------------
    | PRELOADER
@@ -675,22 +676,21 @@ $(window).on("load", function() {
    | ISOTOPE USAGE FILTERING
    |--------------------------------------------------------------------------
    */
+  
   if($('.isotopeWrapper').length){
 
     var $container = $('.isotopeWrapper');
     var $resize = $('.isotopeWrapper').attr('id');
     // initialize isotope
 
-    $container.isotope({
+    var iso = new Isotope(".isotopeWrapper", {
       itemSelector: '.isotopeItem',
       resizable: false, // disable normal resizing
       masonry: {
         columnWidth: $container.width() / $resize
       }
-
-
-
     });
+    
     //var rightHeight = $('#works').height();
     $('#filter a').click(function(e){
 
@@ -709,6 +709,8 @@ $(window).on("load", function() {
         }
 
       });
+      
+      
 
       if (isDesktop === true && $('[id^="paralaxSlice"]').length){
         setTimeout(function(){
@@ -840,6 +842,7 @@ $(window).on("load", function() {
 
 //END WINDOW LOAD
 });
+
 
 
 /*
@@ -1240,7 +1243,7 @@ jQuery(function($){
 
     $('#home').height($(window).height());
 
-    supersized({
+    supersize({
 
       // Functionality
       slideshow               :   1,          // Slideshow on/off
