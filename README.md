@@ -1,4 +1,4 @@
-YT Advisors Website
+Advisors Website
 --------------------
 
 #### Main website for YT Advisors
