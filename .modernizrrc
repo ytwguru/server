@@ -1,0 +1,14 @@
+{
+  "options": [
+    "html5shiv",
+    "prefixed",
+    "setClasses",
+    "mq",
+    "inputElem"
+  ],
+  "feature-detects": [
+    "input",
+    "canvas",
+    "css/resize"
+  ]
+}

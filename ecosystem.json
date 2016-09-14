@@ -1,0 +1,32 @@
+{
+  "apps": [
+    {
+      "name": "advisors-website",
+      "script": "index.js",
+      "instances": 1,
+      "node_args" : [ "--max_old_space_size=1024" ],
+      "exec_mode": "fork",
+      "cwd" : "./app",
+      "env"  : {
+        "NODE_ENV": "production"
+      }
+    }
+  ],
+
+  "deploy" : {
+    "production" : {
+      "key" : "/home/yomi/keys/ytadvisors/webserver.pem",
+      "user" : "ubuntu",
+      "host" : ["54.165.215.150"],
+      "ref"  : "origin/master",
+      "repo" : "git@github.com:ytwguru/advisors-website.git",
+      "path" : "/home/ubuntu/ytadvisors/website",
+      "ssh_options": "StrictHostKeyChecking=no",
+      "pre-deploy-local" : "echo 'This is a local executed command'",
+      "post-deploy" : "npm install --production && pm2 startOrRestart ecosystem.json --env production",
+      "env"  : {
+        "NODE_ENV": "production"
+      }
+    }
+  }
+}
