@@ -1,0 +1,23 @@
+@image-url : "/assets/images";
+
+#preloader{
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #fff;
+  z-index: 99;
+}
+#status {
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  left: 50%; /* centers the loading animation horizontally one the screen */
+  top: 50%; /* centers the loading animation vertically one the screen */
+  background: url("@{image-url}/ui/loader.gif") no-repeat center top; /* path to your loading animation */
+  margin: -50px 0 0 -50px; /* is width and height divided by two */
+  text-align: center;
+  padding-top: 70px;
+  text-transform: uppercase;
+}

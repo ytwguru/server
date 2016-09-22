@@ -1,0 +1,222 @@
+
+.slice {
+  padding-top: 6em;
+  padding-bottom: 6em;
+}
+
+.innerSlice {
+  padding: 3em;
+}
+
+#home .container, #home .col-md-12 {
+  height: 100%;
+  position: relative;
+}
+
+#globalWrapper {
+  max-width: 100%;
+  margin: 0;
+  padding-top: 0;
+}
+
+
+/*box content*/
+.boxContent, .boxContent2 {
+  padding: 1em 0;
+  text-align: center;
+}
+
+.boxContent .parag {
+  font-size: 1em;
+  line-height: 1.5em;
+  font-style: italic;
+  margin-bottom: 0;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  display: none;
+  position: absolute;
+  bottom: -50px;
+  width: 96%;
+  left: 0;
+  text-align: center;
+  padding: 2%;
+}
+
+.boxContent h3 {
+  padding-top: 0;
+  margin: 0.5em 0 0.5em 0;
+  font-weight: 400;
+}
+
+.boxContent hr {
+  margin: 1em 0;
+  padding: 0;
+}
+
+.boxContent {
+  text-align: left;
+}
+
+#paralaxSlice1 {
+  background-image: url('/assets/images/theme-pics/paralax-1.jpg');
+}
+
+#paralaxSlice2 {
+  background-image: url('/assets/images/theme-pics/paralax-2.jpg');
+}
+
+#paralaxSlice4 {
+  background-image: url('/assets/images/theme-pics/paralax-4.jpg');
+}
+
+#paralaxSlice5 {
+  background-image: url('/assets/images/theme-pics/paralax-5.jpg');
+}
+
+#paralaxSlice6 {
+  background-image: url('/assets/images/theme-pics/paralax-6.jpg');
+}
+
+#paralaxSlice7 {
+  background-image: url('/assets/images/theme-pics/paralax-5.jpg');
+}
+
+#paralaxSlice8 {
+  background-image: url('/assets/images/theme-pics/paralax-8.jpg');
+}
+
+#paralaxSlice9 {
+  background-image: url('/assets/images/theme-pics/paralax-9.jpg');
+}
+
+#paralaxSlice10 {
+  background-image: url('/assets/images/theme-pics/paralax-10.jpg');
+}
+
+#paralaxSlice11 {
+  background-image: url('/assets/images/theme-pics/paralax-11.jpg');
+}
+
+#paralaxSlice12 {
+  background-image: url('/assets/images/theme-pics/paralax-11.jpg');
+}
+
+#paralaxSlice1,
+#paralaxSlice2,
+#paralaxSlice4,
+#paralaxSlice5,
+#paralaxSlice6,
+#paralaxSlice7,
+#paralaxSlice8,
+#paralaxSlice9,
+#paralaxSlice10,
+#paralaxSlice11,
+#paralaxSlice12 {
+  width: 100%;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-size: cover;
+  background-position: top center;
+}
+
+
+blockquote {
+  font-size: 1.6em;
+  line-height: 1.5em;
+  margin-bottom: 0;
+  font-weight: 300;
+  font-family: 'Open Sans', sans-serif;
+  padding-left: 0;
+  border: none;
+  text-align: left;
+}
+
+
+
+
+
+/* Portrait tablet to landscape and desktop */
+@media (min-width: 979px) and (max-width: 1200px) {
+  body #globalWrapper {
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+  }
+}
+
+/* Portrait tablet to landscape and desktop */
+@media (min-width: 768px) and (max-width: 979px) {
+  body #globalWrapper {
+    margin: 0 auto;
+    width: 100%;
+  }
+}
+
+
+/* Landscape phone to portrait tablet */
+@media (max-width: 767px) {
+
+  body #globalWrapper {
+    margin: 0;
+    width: 100%;
+  }
+
+  .container {
+    padding: 0 20px;
+  }
+}
+
+/*** MEDIA QUERIES ***/
+
+@media (min-width: 1024px) {
+  #paralaxSlice1,
+  #paralaxSlice2,
+  #paralaxSlice4,
+  #paralaxSlice5,
+  #paralaxSlice6,
+  #paralaxSlice7,
+  #paralaxSlice8,
+  #paralaxSlice9,
+  #paralaxSlice10,
+  #paralaxSlice11,
+  #paralaxSlice12,
+  #homeFullScreen {
+    background-attachment: fixed;
+  }
+
+}
+
+@media (min-width: 1200px) {
+  #paralaxSlice1,
+  #paralaxSlice2,
+  #paralaxSlice4,
+  #paralaxSlice5,
+  #paralaxSlice6,
+  #paralaxSlice7,
+  #paralaxSlice8,
+  #paralaxSlice9,
+  #paralaxSlice10,
+  #paralaxSlice11,
+  #paralaxSlice12,
+  #homeFullScreen {
+    background-position: 50% 0;
+    background-size: cover;
+  }
+}
+
+@media (max-width: 767px) {
+
+  .bigTitle {
+    font-size: 3em;
+  }
+}
+
+@media (max-width: 480px) {
+  h1.bigTitle {
+    font-size: 2em;
+  }
+
+  h2.bigTitle, h3.bigTitle {
+    font-size: 1.2em;
+  }
+
+}

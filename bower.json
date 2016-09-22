@@ -1,0 +1,21 @@
+{
+  "name": "advisors-website",
+  "description": "YT Advisors website",
+  "main": "index.js",
+  "authors": [
+    "YT Advisors Developers"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/ytwguru/advisors-website",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "supersized": "*",
+    "prettyphoto": "*"
+  }
+}

@@ -1,0 +1,198 @@
+/*Main Header*/
+#mainHeader {
+  background-color: white;
+
+  .brand {
+    margin-top: 0.7em;
+    margin-bottom: 0.5em;
+    display:inline-block;
+  }
+
+  .navbar-inner {
+    background: none !important;
+    background: #444;
+    filter:none !important;
+  }
+
+}
+
+
+/*responsive menu (option 2 - no select */
+#nav-toggle {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  width: 60px;
+  height: 60px;
+  position: absolute;
+  top: 0;
+  text-indent: -9999px;
+  overflow: hidden;
+  background: #eee url("/assets/images/ui/resp_nav_btn.png") no-repeat center center;
+  display: none;
+}
+
+
+nav ol, nav ul, ul.iconsList {
+  list-style: none;
+  margin: 0;
+}
+
+/*Navigation*/
+.nav {
+  font-size: 0.9em;
+  margin: 0 auto;
+  display: inline-block;
+
+}
+
+.nav > li > a:hover {
+  color:white;
+}
+
+.nav > li > a:hover, .nav > li > a:focus {
+  background: none;
+}
+
+#mainMenu, #resMainMenu {
+  display:inline-block;
+  margin: 0 0 0 0;
+  right : 0;
+}
+
+#mainMenu ul, #resMainMenu ul {
+  margin: 0;
+}
+
+/*** FIXED MENU ***/
+.fixedHeader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 9999;
+}
+
+.fixedHeader #mainMenu ul li a, .fixedHeader #resMainMenu ul li a {
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
+}
+
+.fixedHeader .brand {
+  margin-top: 0.6em;
+  width: 100px;
+}
+
+
+#mainMenu ul li, #resMainMenu ul li {
+  float: left;
+  position: relative;
+  margin: 0;
+}
+
+#mainMenu ul li a, #resMainMenu ul li a {
+  display: block;
+  text-decoration: none;
+  margin: 0;
+  font-size: 1.14em;
+  padding: 1.875em 1em 1.875em 1em;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+#mainMenu a, #resMainMenu a {
+  -webkit-transition: all 0.2s ease-out;
+  -moz-transition: all 0.2s ease-out;
+  -o-transition: all 0.2s ease-out;
+  -ms-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
+}
+
+#resMainMenu.closed {
+  /*max-height:77px;*/
+}
+
+@media (max-width: 480px) {
+
+  #mainHeader{
+    .brand {
+      text-align: right;
+    }
+    .brand, #mainMenu {
+      float: none;
+    }
+  }
+}
+
+/* Landscape phone to portrait tablet */
+@media (max-width: 767px) {
+
+  #mainHeader .brand {
+    text-align: center;
+    margin-bottom: 20px;
+    width: 100%;
+    margin-right: 0;
+  }
+
+  .nav {
+    font-size: 0.9em;
+    display: inline-block;
+  }
+
+  #nav-toggle {
+    display: block;
+  }
+
+  #resMainMenu, #resMainMenu ul, #resMainMenu ul li {
+    list-style: none;
+    width: 100%;
+    float: left;
+  }
+
+  .jsNav #resMainMenu {
+    clip: rect(0 0 0 0);
+    max-height: 0;
+    position: absolute;
+    display: block;
+    overflow: hidden;
+    zoom: 1;
+  }
+
+  #resMainMenu.opened {
+    max-height: 9999px;
+    margin-bottom: 1em;
+    display: block;
+  }
+
+  #resMainMenu.opened ul li a {
+    padding: 1em;
+  }
+}
+
+
+
+/* Portrait tablet to landscape and desktop */
+@media (min-width: 768px) and (max-width: 979px) {
+
+  #mainMenu, #resMainMenu {
+    float: none;
+    text-align: left;
+    width: 100%;
+    max-height: 77px;
+  }
+
+  .fixedHeader {
+    max-height: 96px;
+  }
+
+  #mainHeader .brand {
+    text-align: center;
+    margin-bottom: 20px;
+    width: 100%;
+    margin-right: 0;
+    float: none;
+  }
+
+}

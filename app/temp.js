@@ -1,41 +1,23 @@
-"use strict";
+import React from "react";
+import ReactDom from "react-dom";
 
-import $ from "jquery";
-import jQuery from "jquery";
-import "jquery-validation";
-import "supersize";
+import "./Home.less";
+import "../../components/Header";
 
-require("./.modernizrrc");
-require("./app/layout.less");
 var Isotope = require("isotope-layout");
 
-var isMobile = false;
-var isDesktop = false;
+export default React.createClass({
 
-
-$(window).on("load resize",function(e){
-
-
-
-  /* mobile detection */
-  if(Modernizr.mq('only all and (max-width: 767px)') ) {
-    isMobile = true;
-  }else{
-    isMobile = false;
+  render : function(){
+    return "";
   }
-
-
-  /* tablette and mobile detection */
-  if(Modernizr.mq('only all and (max-width: 1024px)') ) {
-    isDesktop = false;
-  }else{
-    isDesktop = true;
-  }
-
 });
 
 
 
+$(window).on("load resize",function(e){
+  
+});
 
 /*
  |--------------------------------------------------------------------------
@@ -45,81 +27,6 @@ $(window).on("load resize",function(e){
 
 $(document).ready(function() {
   "use strict";
-  if( $("ul#og-grid").length){
-    Grid.init();
-  };
-
-  /*
-   |--------------------------------------------------------------------------
-   |  form placeholder for IE
-   |--------------------------------------------------------------------------
-   */
-  if(!Modernizr.input.placeholder){
-
-    $('[placeholder]').focus(function() {
-      var input = $(this);
-      if (input.val() == input.attr('placeholder')) {
-        input.val('');
-        input.removeClass('placeholder');
-      }
-    }).blur(function() {
-      var input = $(this);
-      if (input.val() == '' || input.val() == input.attr('placeholder')) {
-        input.addClass('placeholder');
-        input.val(input.attr('placeholder'));
-      }
-    }).blur();
-    $('[placeholder]').parents('form').submit(function() {
-      $(this).find('[placeholder]').each(function() {
-        var input = $(this);
-        if (input.val() == input.attr('placeholder')) {
-          input.val('');
-        }
-      })
-    });
-
-  }
-  /*
-   |--------------------------------------------------------------------------
-   | PRETTY PHOTOS
-   |--------------------------------------------------------------------------
-   */
-
-  if( $("a.prettyPhoto").length){
-    $("a.prettyPhoto").prettyPhoto({
-      animation_speed:'fast',
-      slideshow:10000,
-      hideflash: true
-    });
-  }
-
-
-  if( $("a.prettyPhotoGallery").length){
-
-    $("a.prettyPhotoGallery").click(function (e) {
-
-      var images = $(this).data("rel");
-      images = images.split(',');
-
-
-      var api_images =[];
-
-
-      $.each(images, function( index, value ) {
-        api_images.push(value);
-      });
-
-      //api_titles = [$(this).data("title")];
-      //api_descriptions = [$(this).data("title")];
-      $.fn.prettyPhoto();
-      $.prettyPhoto.open(api_images);
-
-
-
-      e.preventDefault();
-    });
-
-  }
 
 
   /*
@@ -340,61 +247,6 @@ $(document).ready(function() {
 
 
 
-  /*
-   |--------------------------------------------------------------------------
-   | MAIN ROLLOVER EFFECTS
-   |--------------------------------------------------------------------------
-   */
-
-  if($('.imgHover').length){
-
-    $('.imgHover article').hover(
-      function () {
-
-        var $this=$(this);
-
-        var fromTop = ($('.imgWrapper', $this).height()/2 - $('.iconLinks', $this).height()/2);
-        $('.iconLinks', $this).css('margin-top',fromTop);
-
-        $('.media-hover', $this).height($('.imgWrapper', $this).height());
-
-        $('.mask', this).css('height', $('.imgWrapper', this).height());
-        $('.mask', this).css('width', $('.imgWrapper', this).width());
-        $('.mask', this).stop(true, false).fadeIn('fast', function() {}).end();
-
-        if(Modernizr.csstransitions) {
-          $('.iconLinks a').addClass('animated');
-          $('.iconLinks', $this).css('display', 'block');
-
-          $('.iconLinks a:first-child', $this).removeClass('flipOutX');
-          $('.iconLinks a:first-child', $this).addClass('bounceInDown');
-
-          $('.iconLinks a:gt(0)', $this).removeClass('flipOutX');
-          $('.iconLinks a:gt(0)', $this).addClass('bounceInUp');
-        }else{
-
-          $('.iconLinks', $this).stop(true, false).fadeIn('fast');
-        }
-
-        $this.find('.boxInfo > h3').addClass('hoverState', 300);
-        $('.newBadge', this).addClass('animated swing');
-
-      },function () {
-        var $this=$(this);
-        $('.mask', $this).stop(true, false).fadeOut('fast', function() {
-          if(Modernizr.csstransitions) {
-            $('.iconLinks a:first-child', $this).removeClass('bounceInDown');
-            $('.iconLinks a:first-child', $this).addClass('flipOutX');
-            $('.iconLinks a:gt(0)', $this).removeClass('bounceInUp');
-            $('.iconLinks a:gt(0)', $this).addClass('flipOutX');
-          }else{
-            $('.iconLinks', $this).stop(true, false).fadeOut('fast');
-          }
-          $this.find('.boxInfo>h3').removeClass('hoverState',300);
-        }).end();
-        $('.newBadge', this).removeClass('animated swing');
-      });
-  }
 
 
 
@@ -623,9 +475,7 @@ $(document).ready(function() {
 
       $(window).stellar({
         horizontalScrolling: false,
-        parallaxBackgrounds: true,
-        parallaxElements: false,
-        hideDistantElements: true,
+        verticalOffset: 150,
         responsive:true/*,
          scrollProperty: 'scroll',
          parallaxElements: false,
@@ -648,7 +498,7 @@ $(document).ready(function() {
 
 
 
-//END DOCUMENT READY   
+//END DOCUMENT READY
 });
 
 
@@ -668,7 +518,7 @@ $(window).on("load", function() {
    |--------------------------------------------------------------------------
    */
   $('#status').fadeOut(); // will first fade out the loading animation
-  $('#preloader').delay(350).fadeOut('slow'); // will fade out the white DIV that covers the website.
+  
   $('body').delay(350).css({'overflow':'visible'});
 
   /*
@@ -676,7 +526,7 @@ $(window).on("load", function() {
    | ISOTOPE USAGE FILTERING
    |--------------------------------------------------------------------------
    */
-  
+
   if($('.isotopeWrapper').length){
 
     var $container = $('.isotopeWrapper');
@@ -690,7 +540,7 @@ $(window).on("load", function() {
         columnWidth: $container.width() / $resize
       }
     });
-    
+
     //var rightHeight = $('#works').height();
     $('#filter a').click(function(e){
 
@@ -709,13 +559,13 @@ $(window).on("load", function() {
         }
 
       });
-      
-      
 
-      if (isDesktop === true && $('[id^="paralaxSlice"]').length){
-        setTimeout(function(){
-          $.stellar('refresh');
-        }, 1000);
+
+
+      if (modernizrFactory.isDesktop === true && $('[id^="paralaxSlice"]').length){
+        /*setTimeout(function(){
+         $.stellar('refresh');
+         }, 1000);*/
       }
 
       e.preventDefault();
@@ -773,8 +623,6 @@ $(window).on("load", function() {
 
   if($('.scrollMenu').length){
 
-
-
     $(window).scroll(function () {
 
       if($(window).width() > 1024){
@@ -782,11 +630,9 @@ $(window).on("load", function() {
         if($(window).scrollTop() > 0){
           $('#mainHeader').addClass('fixedHeader');
           $('body').css('margin-top', $('#mainHeader').outerHeight(true));
-
         }else{
           $('#mainHeader').removeClass('fixedHeader');
           $('body').css('margin-top', 0);
-
         }
       }
     });
@@ -822,16 +668,16 @@ $(window).on("load", function() {
     {
 
 
-      $(window).stellar({
-        horizontalScrolling: false,
-        verticalOffset: 150,
-        responsive:true/*,
-         scrollProperty: 'scroll',
-         parallaxElements: false,
-         horizontalScrolling: false,
-         horizontalOffset: 0,
-         verticalOffset: 0*/
-      });
+      /*$(window).stellar({
+       horizontalScrolling: false,
+       verticalOffset: 150,
+       responsive:true/!*,
+       scrollProperty: 'scroll',
+       parallaxElements: false,
+       horizontalScrolling: false,
+       horizontalOffset: 0,
+       verticalOffset: 0*!/
+       });*/
 
     }
 
@@ -999,101 +845,7 @@ function animateTxt(curSlide, action){
 
 
 /* MAIN MENU (submenu slide and setting up of a select box on small screen)*/
-(function() {
-  "use strict";
-  var $mainMenu = $('#mainMenu').children('ul');
 
-  $mainMenu.on('mouseenter', 'li', function() {
-
-
-    var $this = $(this),
-      $subMenu = $this.children('ul');
-
-
-    if( $subMenu.length ){$this.addClass('hover').stop();}
-    else {
-      if($this.parent().is($(':gt(1)', $mainMenu))){
-        $this.stop(false, true).hide().fadeIn('slow');
-      }else{
-        $this.stop(false, true);
-      }
-    }
-
-
-    if($this.parent().is($(':gt(1)', $mainMenu))){
-
-      $subMenu.css('display', 'block');
-      $subMenu.stop(false, true).animate({
-        left:150,
-        opacity:1
-      }, 250,'easeInOutQuad');
-
-    }else{
-
-      $subMenu.stop(false, true).slideDown(200,'easeInOutQuad');
-
-    }
-
-
-  }).on('mouseleave', 'li', function() {
-
-
-    var $nthis = $(this),
-      $subMenu = $nthis.children('ul');
-
-    if($nthis.parent().is($(':gt(1)', $mainMenu))){
-
-      //$nthis.children('ul').stop(false, true).css('left', 130).css('opacity', 0).css('display', 'none');
-
-      $nthis.children('ul').stop(false, true).animate({
-        left:130,
-        opacity:0
-      }, 250,'easeInOutQuad', function() {
-        $nthis.children('ul').css('display', 'none');
-      });
-
-    }else{
-
-      $nthis.removeClass('hover').removeClass('Shover').children('ul').stop(false, true).hide();
-    }
-
-
-
-    if( $subMenu.length ){$nthis.removeClass('hover');}
-    else{$nthis.removeClass('Shover');}
-
-
-  });
-
-  if ($('#resMainMenu').length){
-    responsiveNav("#resMainMenu", {jsClass: "jsNav"});
-
-  }else{
-
-    // ul to select
-    var optionsList = '<option value="" selected>Navigate...</option>';
-    $mainMenu.find('li').each(function() {
-      var $this   = $(this),
-        $anchor = $this.children('a'),
-        depth   = $this.parents('ul').length - 1,
-        indent  = '';
-
-      if( depth ) {
-        while( depth > 0 ) {
-          indent += ' - ';
-          depth--;
-        }
-      }
-
-      optionsList += '<option value="' + $anchor.attr('href') + '">' + indent + ' ' + $anchor.text() + '</option>';
-    }).end().after('<select class="responsive-nav">' + optionsList + '</select>');
-
-    $('.responsive-nav').on('change', function() {
-      window.location = $(this).val();
-    });
-  }
-
-})();
 
 
 /*
@@ -1126,7 +878,7 @@ function initialize(id) {
     //point number 2
     ['Best town ever', 'Santa Cruz', 36.986021, -122.02216399999998],
 
-    //point number 3 
+    //point number 3
     ['Located in the Midwestern United States', 'Kansas'],
 
     //point number 4
@@ -1229,62 +981,3 @@ function initialize(id) {
     }
   }
 }
-
-
-
-
-
-
-
-
-jQuery(function($){
-  "use strict";
-  if($('#home').length){
-
-    $('#home').height($(window).height());
-
-    supersize({
-
-      // Functionality
-      slideshow               :   1,          // Slideshow on/off
-      autoplay                :   1,          // Slideshow starts playing automatically
-      start_slide             :   1,          // Start slide (0 is random)
-      stop_loop               :   0,          // Pauses slideshow on last slide
-      random                  :   0,          // Randomize slide order (Ignores start slide)
-      slide_interval          :   12000,      // Length between transitions
-      transition              :   6,          // 0-None, 1-Fade, 2-Slide Top, 3-Slide Right, 4-Slide Bottom, 5-Slide Left, 6-Carousel Right, 7-Carousel Left
-      transition_speed        :   1000,       // Speed of transition
-      new_window              :   1,          // Image links open in new window/tab
-      pause_hover             :   0,          // Pause slideshow on hover
-      keyboard_nav            :   1,          // Keyboard navigation on/off
-      performance             :   1,          // 0-Normal, 1-Hybrid speed/quality, 2-Optimizes image quality, 3-Optimizes transition speed // (Only works for Firefox/IE, not Webkit)
-      image_protect           :   1,          // Disables image dragging and right click with Javascript
-
-      // Size & Position                         
-      min_width               :   0,          // Min width allowed (in pixels)
-      min_height              :   0,          // Min height allowed (in pixels)
-      vertical_center         :   1,          // Vertically center background
-      horizontal_center       :   1,          // Horizontally center background
-      fit_always              :   0,          // Image will never exceed browser width or height (Ignores min. dimensions)
-      fit_portrait            :   1,          // Portrait images will not exceed browser height
-      fit_landscape           :   0,          // Landscape images will not exceed browser width
-
-      // Components                           
-      slide_links             :   'blank',    // Individual links for each slide (Options: false, 'num', 'name', 'blank')
-      thumb_links             :   0,          // Individual thumb links for each slide
-      thumbnail_navigation    :   0,          // Thumbnail navigation
-      slides                  :   [           // Slideshow Images
-        {image : './images/slider/super/supersized-1.jpg', title : '<h1 class="bigTitle">Sun is shining<br /> <small>the weather is sweet</small></h1><a href="#news" class="btn sliderBtn" >Read more</a>', thumb : '', url : ''},
-
-        {image : './images/slider/super/supersized-2.jpg', title : '<h1 class="bigTitle">Moon is rising<br /> <small>the night is bitter</small></h1><a href="#works" class="btn sliderBtn" >Check our work</a>', thumb : '', url : ''},
-
-        {image : './images/slider/super/supersized-3.jpg', title : '<h1 class="bigTitle">Groove is in the heart<br /> <small>ahaaanhaan</small></h1><a href="#works" class="btn sliderBtn" >More info</a>', thumb : '', url : ''}
-      ],
-
-      // Theme Options               
-      progress_bar            :   0,          // Timer for each slide                         
-      mouse_scrub             :   0
-
-    });
-  }
-});

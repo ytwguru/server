@@ -1,0 +1,51 @@
+.bigTitle, h1.bigTitle, h2.bigTitle, h3.bigTitle {
+  font-weight: 800;
+  font-size: 5em;
+  line-height: 1em;
+  text-transform: uppercase;
+  padding: 0.5em 0;
+  text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.2);
+}
+
+h1.bigTitle {
+  margin-bottom: 0;
+}
+
+h1.bigTitle:after {
+  content: none
+}
+
+.paralaxText {
+  padding-top: 66px;
+  padding-bottom: 66px;
+  text-align: center;
+  position: relative;
+}
+
+.paralaxText blockquote {
+  font-size: 3.21em;
+  line-height: 1.5em;
+  margin-bottom: 0;
+  font-weight: 800;
+  font-family: 'Open Sans', sans-serif;
+  padding-left: 0;
+  border: none;
+  text-align: left;
+  text-transform: uppercase;
+  text-align: center;
+  text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.2);
+}
+
+
+@media (max-width: 767px) {
+  .paralaxText blockquote {
+    font-size: 1.2em;
+  }
+}
+
+@media (max-width: 480px) {
+  .paralaxText {
+    padding: 3em 0 1.5em 0;
+  }
+}
+

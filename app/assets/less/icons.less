@@ -1,0 +1,266 @@
+/* iconWrapper */
+.iconWrapper {
+  display: inline-block;
+  position: relative;
+  margin: 0 auto 0 auto;
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+  text-align: center;
+  width: 50px;
+  height: 50px;
+  font-size: 20px;
+}
+
+.iconWrapper i {
+  margin: 0;
+  line-height: 40px;
+  position: absolute;
+  top: 6px;
+  left: 15px;
+}
+
+.iconWrapper i:before {
+  margin: 0 !important;
+}
+
+.iconWrapper:hover i, .triggeredHover {
+  -moz-transform: rotate(360deg);
+  -webkit-transform: rotate(360deg);
+  -ms--transform: rotate(360deg);
+  transform: rotate(360deg);
+  -webkit-transition: all 0.2s;
+  -moz-transition: all 0.2s;
+  -o-transition: all 0.2s;
+  -ms-transition: all 0.2s;
+  transition: all 0.2s;
+}
+
+.iconWrapper i {
+  -webkit-transition: all 0.8s;
+  -moz-transition: all 0.8s;
+  -o-transition: all 0.8s;
+  -ms-transition: all 0.8s;
+  transition: all 0.8s;
+}
+
+.iconWrapper.iconBig {
+  height: 128px;
+  width: 128px;
+}
+
+.iconWrapper.iconBig i {
+  line-height: 128px;
+  font-size: 72px;
+  line-height: 128px;
+  top: 0;
+  left: 27px;
+}
+
+.iconWrapper.iconBig:hover i {
+  text-shadow: none;
+}
+
+.iconWrapper.iconSmall {
+  height: 36px;
+  width: 36px;
+  line-height: 36px;
+}
+
+.iconWrapper.iconSmall i {
+  line-height: 28px;
+  line-height: 0px;
+  font-size: 16px;
+  top: 10px;
+  left: 9px;
+}
+
+.iconWrapper.iconMini {
+  height: 20px;
+  width: 20px;
+  line-height: 21px;
+  font-size: 15px;
+}
+
+.iconWrapper.iconMini i {
+  line-height: 0;
+  font-size: 11px;
+  top: 5px;
+  left: 4px;
+}
+
+
+.iconWrapper{
+  margin-bottom: 0;
+  padding: 0;
+}
+
+/*** icons ***/
+.iconBlocHeading {
+  width: 100%;
+  float: left;
+  margin-bottom: 1.5em;
+}
+
+.iconBlocHeading .iconWrapper, .iconBlocHeading h2, .iconBlocHeading h3, .iconBlocHeading h4 {
+  float: left;
+  margin-bottom: 0;
+  padding: 0;
+}
+
+.iconBlocHeading h2, .iconBlocHeading h3, .iconBlocHeading h4 {
+  line-height: 3.25em;
+  margin-left: 10px;
+}
+
+.iconBlocHeading h2 {
+  border: none;
+}
+
+.iconBlocHeading h2:after {
+  content: none;
+}
+
+/* ICONS */
+
+/**** ICON and Icon lists ****/
+h3 [class^="icon-"], h3 [class*=" icon-"] {
+  line-height: 1.5em;
+}
+
+.bigIcon {
+  text-align: center;
+}
+
+.bigIcon i {
+  font-size: 6em;
+  margin-bottom: 0.5em;
+}
+
+.btn-large [class^="icon-"], .btn-large [class*=" icon-"] {
+  margin-top: 0;
+}
+
+ul.iconsList i {
+  font-size: 0.75em;
+  line-height: 1.5em;
+}
+
+ul.iconsList.iconsList-large li {
+  line-height: 1.5em;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1.5em;
+  font-weight: 300;
+}
+
+ul.iconsList.iconsList-large i {
+  line-height: 1.8em;
+}
+
+/* icon lists */
+
+.iconList-body {
+  overflow: hidden;
+}
+
+.iconList h2, .iconList h3, .iconList h4, .iconList p {
+  margin-top: 0;
+}
+
+.iconList li {
+  border-bottom: 1px dotted #ededed;
+}
+
+.iconList .pull-left {
+  margin-right: 10px;
+}
+
+.iconBox {
+  margin-bottom: 1em;
+}
+
+.iconBox-body {
+  overflow: hidden;
+}
+
+.iconBoxes .pull-left {
+  margin-right: 10px;
+}
+
+.iconBoxV2 .iconBox-icon, .iconBoxV2 .iconBox-body {
+}
+
+.iconBoxV2 .iconBox-body {
+  padding: 0.5em
+}
+
+.iconBoxV2 .iconBox-icon {
+  width: 4em;
+  display: block;
+  text-align: center;
+  padding-top: 0.5em;
+}
+
+.iconBoxV2 .iconBox-icon i {
+  font-size: 3em
+}
+
+.iconBoxV2 h2 {
+  border: none;
+  margin-top: 0.66em;
+}
+
+article.iconBoxV3 {
+  display: block;
+  padding: 0;
+  text-align: center;
+  min-height: 310px;
+}
+
+.iconBoxV3 h2 {
+  font-weight: 800;
+}
+
+.iconBoxV3 p {
+  padding: 10px;
+}
+
+.iconBoxV3 a {
+  display: block;
+}
+
+.iconBoxV3 a i {
+  display: inline-block;
+  -webkit-transition: all 0.4s ease-out;
+  -webkit-backface-visibility: hidden;
+  -moz-transition: all 0.4s ease-out;
+  -o-transition: all 0.4s ease-out;
+  -ms-transition: all 0.4s ease-out;
+  transition: all 0.4s ease-out;
+  text-shadow: none;
+}
+
+.iconBoxV3 a:hover {
+  text-decoration: none;
+}
+
+.iconBoxV3 a h2 {
+  padding-top: 0.66em
+}
+
+
+/*target chrome only for better vertical align of icon*/
+@media screen and (-webkit-min-device-pixel-ratio: 0) {
+  ul.iconsList i {
+    line-height: 2em;
+  }
+
+  ul.iconsList.iconsList-large i {
+    line-height: 2em;
+  }
+
+  .btn-large [class^="icon-"], .btn-large [class*=" icon-"] {
+    margin-top: 0;
+    line-height: 1.25em
+  }
+}

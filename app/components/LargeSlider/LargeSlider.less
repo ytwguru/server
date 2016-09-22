@@ -1,0 +1,77 @@
+
+#home {
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+#homeApp {
+  padding-top: 3em;
+}
+
+#homeApp h1.bigTitle {
+  text-align: left;
+  margin-bottom: 0;
+}
+
+/*** supersized ***/
+#slidecaption {
+  text-align: center;
+  padding-top: 10%;
+}
+
+/*replace background images with icon font for supersized slider UI*/
+
+#nextslide, #prevslide {
+  background: none;
+  font-family: 'custom-icons';
+  font-size: 1.5em;
+  text-align: center;
+  color: #fff;
+  height: 4em;
+  width: 2em;
+  line-height: 4em;
+}
+
+#prevslide:before {
+  content: '\e75d';
+}
+
+#nextslide:before {
+  content: '\e75e';
+}
+
+a#nextslide:hover, a#prevslide:hover {
+  text-decoration: none;
+}
+
+/* Portrait tablet to landscape and desktop */
+@media (min-width: 979px) and (max-width: 1200px) {
+
+  #slidecaption {
+    padding-top: 10%;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 979px) {
+
+  #homeApp h1.bigTitle {
+    font-size: 2.3em;
+    line-height: 1.25em;
+  }
+}
+
+
+/* Landscape phone to portrait tablet */
+@media (max-width: 767px) {
+
+  #homeApp h1.bigTitle {
+    font-size: 2.3em;
+    line-height: 1.25em;
+    text-align: center;
+  }
+
+  #homeApp, .app footer {
+    text-align: center;
+  }
+}
