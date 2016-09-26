@@ -23,40 +23,11 @@ export default React.createClass({
   componentDidMount : function(){
     modernizrFactory.initialize();
     prettyPhotoFactory.initialize();
-    if($('.scrollMenu').length) {
-
-
-      $(window).scroll(function () {
-
-        if ($(window).width() > 1024) {
-
-          if ($(window).scrollTop() > 0) {
-            $('#mainHeader').addClass('fixedHeader');
-            $('body').css('margin-top', $('#mainHeader').outerHeight(true));
-
-          } else {
-            $('#mainHeader').removeClass('fixedHeader');
-            $('body').css('margin-top', 0);
-
-          }
-        }
-      });
-    }
-
-    var $offset ='';
-    if($(window).width() > 1024  ){
-      $offset = $('.fixedHeader').outerHeight(true)/2 + 20;
-    }else{
-      $offset = 0;
-    }
     if($('.localscroll').length){
       $('.localscroll').localScroll({
         lazy: true,
         lock: true,
-        hash: false,
-        offset: {
-          top:  -($offset)
-        }
+        hash: false
       });
     }
   },
@@ -95,23 +66,18 @@ export default React.createClass({
     }
     return data;
   },
-  /*
-   <nav className="arrowsNav">
-   <a href="#home" className="navUp color4"> <i className="icon-up-open"></i> </a>
-   </nav>
-   */
   
   getBreakerContent : function(section){
     var data = {};
     switch(section){
       case 0:
         data = {
-          id : "paralaxSlice1", icon : "icon-megaphone", text : "Good design is good business."
+          id : "paralaxSlice1", icon : "icon-megaphone", text : "If you come to a fork in the road,<br/> take it.", color :"color4"
         };
         break;
       case 1:
         data = {
-          id : "paralaxSlice2", icon : "icon-camera", text : "Less is only more <br/> where more is no good"
+          id : "paralaxSlice2", icon : "icon-camera", text : "When your work speaks for itself, <br/> don't interrupt."
         };
         break;
       case 2:

@@ -55,7 +55,7 @@ export default React.createClass({
       <section className="slice color1">
         <div className="container">
           <div className="row">
-            <div className="col-md-4"> <img src="./assets/images/theme-pics/services.png" alt="services" />
+            <div className="col-md-4"> <img className="img-responsive" src="./assets/images/theme-pics/services.png" alt="services" />
             </div>
             <div className="col-md-4">
               <h2>Choose your color, build your website, now!</h2>

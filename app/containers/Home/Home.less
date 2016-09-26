@@ -132,7 +132,102 @@ blockquote {
 
 
 
+/* iconWrapper */
+.iconWrapper {
+  display: inline-block;
+  position: relative;
+  margin: 0 auto 0 auto;
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+  text-align: center;
+  width: 50px;
+  height: 50px;
+  font-size: 20px;
+}
 
+.iconWrapper i {
+  margin: 0;
+  line-height: 40px;
+  position: absolute;
+  top: 6px;
+  left: 15px;
+}
+
+.iconWrapper i:before {
+  margin: 0 !important;
+}
+
+.iconWrapper:hover i, .triggeredHover {
+  -moz-transform: rotate(360deg);
+  -webkit-transform: rotate(360deg);
+  -ms--transform: rotate(360deg);
+  transform: rotate(360deg);
+  -webkit-transition: all 0.2s;
+  -moz-transition: all 0.2s;
+  -o-transition: all 0.2s;
+  -ms-transition: all 0.2s;
+  transition: all 0.2s;
+}
+
+.iconWrapper i {
+  -webkit-transition: all 0.8s;
+  -moz-transition: all 0.8s;
+  -o-transition: all 0.8s;
+  -ms-transition: all 0.8s;
+  transition: all 0.8s;
+}
+
+.iconWrapper.iconBig {
+  height: 128px;
+  width: 128px;
+}
+
+.iconWrapper.iconBig i {
+  line-height: 128px;
+  font-size: 72px;
+  line-height: 128px;
+  top: 0;
+  left: 27px;
+}
+
+.iconWrapper.iconBig:hover i {
+  text-shadow: none;
+}
+
+.iconWrapper.iconSmall {
+  height: 36px;
+  width: 36px;
+  line-height: 36px;
+}
+
+.iconWrapper.iconSmall i {
+  line-height: 28px;
+  line-height: 0px;
+  font-size: 16px;
+  top: 10px;
+  left: 9px;
+}
+
+.iconWrapper.iconMini {
+  height: 20px;
+  width: 20px;
+  line-height: 21px;
+  font-size: 15px;
+}
+
+.iconWrapper.iconMini i {
+  line-height: 0;
+  font-size: 11px;
+  top: 5px;
+  left: 4px;
+}
+
+
+.iconWrapper{
+  margin-bottom: 0;
+  padding: 0;
+}
 
 /* Portrait tablet to landscape and desktop */
 @media (min-width: 979px) and (max-width: 1200px) {

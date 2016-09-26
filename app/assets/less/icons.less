@@ -89,6 +89,15 @@
   left: 4px;
 }
 
+.iconWrapper.iconBig {
+  height: 108px;
+  width: 108px;
+}
+
+.iconWrapper.iconBig i {
+  top: -10px;
+  left: 16px;
+}
 
 .iconWrapper{
   margin-bottom: 0;
@@ -263,4 +272,31 @@ article.iconBoxV3 {
     margin-top: 0;
     line-height: 1.25em
   }
+}
+
+/* Landscape phone to portrait tablet */
+@media (max-width: 767px) {
+  /*
+  .iconWrapper.iconBig {
+    height: 108px;
+    width: 108px;
+  }
+
+  .iconWrapper.iconBig i {
+    top: -10px;
+    left: 16px;
+  }
+  */
+
+  .iconWrapper.iconBig {
+    height: 80px;
+    width: 80px;
+  }
+
+  .iconWrapper.iconBig i {
+    font-size: 50px;
+    line-height: 105px;
+    left: 14px;
+  }
+
 }

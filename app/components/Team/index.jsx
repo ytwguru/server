@@ -14,7 +14,7 @@ export default React.createClass({
           </div>
           <div className="col-md-3">
             <article className="boxWrapper color1">
-              <div><img src="./assets/images/team/pic1.jpg" alt="" /></div>
+              <div><img className="img-responsive" src="./assets/images/team/pic1.jpg" alt="" /></div>
               <div className="boxContent2">
                 <h3>Janet DOE </h3>
                 <p>Executive Director</p>
@@ -32,7 +32,7 @@ export default React.createClass({
           </div>
           <div className="col-md-3">
             <article className="boxWrapper color1">
-              <div><img src="./assets/images/team/pic2.jpg" alt="" /></div>
+              <div><img className="img-responsive" src="./assets/images/team/pic2.jpg" alt="" /></div>
               <div className="boxContent2">
                 <h3>Johanna Newsom</h3>
                 <p>Salesman</p>
@@ -50,7 +50,7 @@ export default React.createClass({
           </div>
           <div className="col-md-3">
             <article className="boxWrapper color1">
-              <div><img src="./assets/images/team/pic3.jpg" alt="" /></div>
+              <div><img className="img-responsive" src="./assets/images/team/pic3.jpg" alt="" /></div>
               <div className="boxContent2">
                 <h3>Alexander Doe</h3>
                 <p>Graphic designer</p>
@@ -68,7 +68,7 @@ export default React.createClass({
           </div>
           <div className="col-md-3">
             <article className="boxWrapper color1">
-              <div><img src="./assets/images/team/pic4.jpg" alt="" /></div>
+              <div><img className="img-responsive" src="./assets/images/team/pic4.jpg" alt="" /></div>
               <div className="boxContent2">
                 <h3>Pamela Anderson</h3>
                 <p>Programmer</p>

@@ -13,5 +13,5 @@ import "./assets/fonts/custom-icons/css/custom-icons-ie7.css";
 ReactDOM.render(
   <Home>
   </Home>,
-  document.getElementById("content")
+  document.getElementById("app")
 );

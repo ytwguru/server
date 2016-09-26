@@ -102,70 +102,7 @@ $(document).ready(function() {
 
 
 
-  /* MAP */
-  $('#mapTrigger').click(function(e){
-
-
-    $('#mapSlideWrapper').css('display', 'block');
-    initialize('mapWrapper');
-
-    $('#contactinfoWrapper, #contactinfoWrapperPage').animate({
-      marginLeft:'-2000px'
-    }, 400, function() {});
-
-
-    $('#mapSlideWrapper').animate({
-      marginLeft:'25px'
-    }, 400, function() {});
-
-    appendBootstrap();
-
-    e.preventDefault();
-  });
-
-
-  $('#mapTriggerLoader').click(function(e){
-
-
-    $('#mapSlide').css('display', 'block');
-
-    $('#contactSlide').animate({
-      marginLeft:'-2000px'
-    }, 400, function() {});
-
-
-    $('#mapSlide').animate({
-      marginLeft:'0'
-    }, 400, function() {
-      $('#contactSlide').css('display', 'none');
-    });
-
-
-    appendBootstrap();
-
-    e.preventDefault();
-  });
-
-
-  $('#mapReturn').click(function(e){
-    //$('#mapWrapper').css('margin-bottom', '3em');
-
-    $('#contactSlide').css('display', 'block');
-    $('#mapSlide').animate({
-      marginLeft:'3000px'
-    }, 400, function() {});
-
-
-    $('#contactSlide').animate({
-      marginLeft:'0'
-    }, 400, function() {
-      $('#mapSlide').css('display', 'none');
-    });
-
-    e.preventDefault();
-  });
-
-
+  
 
   /*
    |--------------------------------------------------------------------------
@@ -356,28 +293,6 @@ $(document).ready(function() {
 
 
 
-  $('#quoteTrigger').click(function (e) {
-
-    //$("#quoteWrapper").scrollTop(0);
-
-    if(!$('#quoteFormWrapper').is(':visible')){
-      $('html, body').animate({scrollTop: $("#quoteWrapper").offset().top}, 300);
-    }
-
-    var $this = $(this);
-
-
-    $('#quoteFormWrapper').slideToggle('fast', function() {
-
-      $this.text($('#quoteFormWrapper').is(':visible') ? "Close form" : "I have a project");
-
-    });
-
-
-    e.preventDefault();
-  });
-
-
 
   /*
    |--------------------------------------------------------------------------
@@ -512,14 +427,6 @@ $(document).ready(function() {
 
 $(window).on("load", function() {
 
-  /*
-   |--------------------------------------------------------------------------
-   | PRELOADER
-   |--------------------------------------------------------------------------
-   */
-  $('#status').fadeOut(); // will first fade out the loading animation
-  
-  $('body').delay(350).css({'overflow':'visible'});
 
   /*
    |--------------------------------------------------------------------------
@@ -623,39 +530,7 @@ $(window).on("load", function() {
 
   if($('.scrollMenu').length){
 
-    $(window).scroll(function () {
-
-      if($(window).width() > 1024){
-
-        if($(window).scrollTop() > 0){
-          $('#mainHeader').addClass('fixedHeader');
-          $('body').css('margin-top', $('#mainHeader').outerHeight(true));
-        }else{
-          $('#mainHeader').removeClass('fixedHeader');
-          $('body').css('margin-top', 0);
-        }
-      }
-    });
-
-    var $offset ='';
-    if($(window).width() > 1024  ){
-
-      $offset = $('.fixedHeader').outerHeight(true)/2 + 20;
-
-    }else{
-
-      $offset = 0;
-    }
-    if($('.localscroll').length){
-      $('.localscroll').localScroll({
-        lazy: true,
-        lock: true,
-        hash: false,
-        offset: {
-          top:  -($offset)
-        }
-      });
-    }
+    
 
     var isMobile = false;
 
@@ -699,148 +574,11 @@ $(window).on("load", function() {
 
 /* CONTACT FROM */
 
-jQuery(function() {
-  "use strict";
-  if( jQuery("#contactfrm").length ){
 
-    $("#contactfrm").validate({
-      // debug: true,
-      errorPlacement: function(error, element) {
-        error.insertBefore( element );
-      },
-      submitHandler: function(form) {
-        jQuery(form).ajaxSubmit({
-          target: ".result"
-        });
-      },
-      onkeyup: false,
-      onclick: false,
-      rules: {
-        name: {
-          required: true,
-          minlength: 3
-        },
-        email: {
-          required: true,
-          email: true
-        },
-        phone: {
-          required: true,
-          minlength: 10,
-          digits:true
-        },
-        comment: {
-          required: true,
-          minlength: 10,
-          maxlength: 350
-        }
-      }
-    });
-  }
-
-  if( jQuery("#projectQuote").length){
-
-    $("#projectQuote").validate({
-      // debug: true,
-      errorPlacement: function(error, element) {
-        error.insertBefore(element);
-      },
-      submitHandler: function(form) {
-        jQuery(form).ajaxSubmit({
-          target: ".quoteResult"
-        });
-      },
-      onkeyup: false,
-
-
-      rules: {
-        name: {
-          required: true,
-          minlength: 3
-        },
-        email: {
-          required: true,
-          email: true
-        },
-        company: {
-          required: true,
-          minlength: 2
-        },
-        quoteType:{
-          required: true
-        },
-        comment: {
-          required: true,
-          minlength: 10,
-          maxlength: 350
-        }
-
-      }
-    });
-
-
-
-  }
-
-});
 
 /* CONTACT FROM */
 
 /* FLEXSLIDER INNER INFO CUSTOM ANIMATION */
-function animateTxt(curSlide, action){
-  "use strict";
-  if(action === 'in'){
-    var i = 0;
-    var animaDelay = 0;
-
-    $('.slideN'+curSlide+':not([class*=clone])>.caption').css('display', 'block');
-
-    $('.slideN'+curSlide+':not([class*=clone])>.caption>div').each(function( ) {
-      if(Modernizr.csstransitions) {
-
-        $(this).css('-webkit-animation-delay', animaDelay+'s');
-        $(this).css('-moz-animation-delay', animaDelay+'s');
-        $(this).css('-0-animation-delay', animaDelay+'s');
-        $(this).css('-ms-animation-delay', animaDelay+'s');
-        $(this).css('animation-delay-delay', animaDelay+'s');
-
-        $(this).show().addClass('animated').addClass($(this).attr('data-animation'));
-
-
-        // $(this).show('slow', function() {
-        //     $(this).addClass('animated').addClass($(this).attr('data-animation'));
-        // });
-
-
-      }else{
-        var timing;
-        $('.slideN'+curSlide+':not([class*=clone])>.caption>div').hide();
-        if (i === 0){timing = 0;}else if(i === 1){timing = 300;} else{ timing = 300 * i;}
-        $(this).delay(timing).fadeIn('fast');
-      }
-      i++;
-      animaDelay = animaDelay+0.2;
-
-
-    });
-
-  }else{
-    var j = 0;
-    $('.slideN'+curSlide+':not([class*=clone])>.caption').css('display', 'none');
-
-    $('.slideN'+curSlide+':not([class*=clone])>.caption>div').each(function( ) {
-      if(Modernizr.csstransitions) {
-
-        $(this).removeClass($(this).attr('data-animation')).removeClass('animated').hide();
-
-      }else{
-        $(this).hide();
-      }
-      j++;
-    });
-  }
-
-}
 
 
 
@@ -854,130 +592,4 @@ function animateTxt(curSlide, action){
  |--------------------------------------------------------------------------
  */
 
-function appendBootstrap() {
-  "use strict";
-  var script = document.createElement("script");
-  script.type = "text/javascript";
-  script.src = "http://maps.google.com/maps/api/js?sensor=false&callback=initialize";
-  document.body.appendChild(script);
-}
 
-
-
-
-function initialize(id) {
-  "use strict";
-  var image = 'images/icon-map.png';
-
-  var overlayTitle = 'Agencies';
-
-  var locations = [
-    //point number 1
-    ['Madison Square Garden', '4 Pennsylvania Plaza, New York, NY'],
-
-    //point number 2
-    ['Best town ever', 'Santa Cruz', 36.986021, -122.02216399999998],
-
-    //point number 3
-    ['Located in the Midwestern United States', 'Kansas'],
-
-    //point number 4
-    ['I\'ll definitly be there one day', 'Chicago', 41.8781136, -87.62979819999998]
-  ];
-
-  /*** DON'T CHANGE ANYTHING PASSED THIS LINE ***/
-  id = (id === undefined) ? 'mapWrapper' : id;
-
-  var map = new google.maps.Map(document.getElementById(id), {
-    mapTypeId: google.maps.MapTypeId.ROADMAP,
-    scrollwheel: false,
-    zoomControl: true,
-    zoomControlOptions: {
-      style: google.maps.ZoomControlStyle.LARGE,
-      position: google.maps.ControlPosition.LEFT_CENTER
-    },
-    streetViewControl:true,
-    scaleControl:false,
-    zoom: 14
-
-  });
-
-  var myLatlng;
-  var marker, i;
-  var bounds = new google.maps.LatLngBounds();
-  var infowindow = new google.maps.InfoWindow({ content: "loading..." });
-
-  for (i = 0; i < locations.length; i++) {
-
-
-    if(locations[i][2] !== undefined && locations[i][3] !== undefined){
-      var content = '<div class="infoWindow">'+locations[i][0]+'<br>'+locations[i][1]+'</div>';
-      (function(content) {
-        myLatlng = new google.maps.LatLng(locations[i][2], locations[i][3]);
-
-        marker = new google.maps.Marker({
-          position: myLatlng,
-          icon:image,
-          title: overlayTitle,
-          map: map
-        });
-
-        google.maps.event.addListener(marker, 'click', (function() {
-          return function() {
-            infowindow.setContent(content);
-            infowindow.open(map, this);
-          };
-
-        })(this, i));
-
-        if(locations.length > 1){
-          bounds.extend(myLatlng);
-          map.fitBounds(bounds);
-        }else{
-          map.setCenter(myLatlng);
-        }
-
-      })(content);
-    }else{
-
-      var geocoder   = new google.maps.Geocoder();
-      var info   = locations[i][0];
-      var addr   = locations[i][1];
-      var latLng = locations[i][1];
-
-      (function(info, addr) {
-
-        geocoder.geocode( {
-
-          'address': latLng
-
-        }, function(results) {
-
-          myLatlng = results[0].geometry.location;
-
-          marker = new google.maps.Marker({
-            position: myLatlng,
-            icon:image,
-            title: overlayTitle,
-            map: map
-          });
-          var $content = '<div class="infoWindow">'+info+'<br>'+addr+'</div>';
-          google.maps.event.addListener(marker, 'click', (function() {
-            return function() {
-              infowindow.setContent($content);
-              infowindow.open(map, this);
-            };
-          })(this, i));
-
-          if(locations.length > 1){
-            bounds.extend(myLatlng);
-            map.fitBounds(bounds);
-          }else{
-            map.setCenter(myLatlng);
-          }
-        });
-      })(info, addr);
-
-    }
-  }
-}

@@ -8,12 +8,17 @@ export default React.createClass({
   getProps : function(){
     return this.props.data;
   },
+  getIconClass : function(color){
+    if(color)
+      return "iconWrapper iconBig color4 col-centered";
+    return "iconWrapper iconBig col-centered";
+  },
   render : function(){
     var data = this.getProps();
     return <div id={data.id} data-stellar-background-ratio="0.5">
       <div className="paralaxText container">
         <div className="row">
-          <div className="iconWrapper iconBig color4 col-centered">
+          <div className={this.getIconClass(data.color)}>
             <i className={data.icon}>
             </i>
           </div>

@@ -55,9 +55,8 @@ module.exports = [
         modernizr$: "./app/.modernizrrc",
         masonry : "masonry-layout",
         isotope: 'isotope-layout',
-        respond: 'respond\.js/src/respond',
+        respond: 'respond.js/src/respond',
         "jquery.stellar" : "jquery.stellar/jquery.stellar",
-        "supersized" : "bower_components/supersized/core/js/supersized.core.3.2.1.js",
         "prettyphoto" : "bower_components/prettyphoto/js/jquery.prettyPhoto.js"
       }
     },

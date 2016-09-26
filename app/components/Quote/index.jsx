@@ -3,7 +3,58 @@ import React from "react";
 
 export default React.createClass({
   componentDidMount : function(){
-    
+    if (jQuery("#projectQuote").length) {
+      /*$("#projectQuote").validate({
+        // debug: true,
+        errorPlacement: function (error, element) {
+          error.insertBefore(element);
+        },
+        submitHandler: function (form) {
+          jQuery(form).ajaxSubmit({
+            target: ".quoteResult"
+          });
+        },
+        onkeyup: false,
+        rules: {
+          name: {
+            required: true,
+            minlength: 3
+          },
+          email: {
+            required: true,
+            email: true
+          },
+          company: {
+            required: true,
+            minlength: 2
+          },
+          quoteType: {
+            required: true
+          },
+          comment: {
+            required: true,
+            minlength: 10,
+            maxlength: 350
+          }
+
+        }
+      });*/
+    }
+    var $form = $('#quoteFormWrapper');
+    $('#quoteTrigger').click(function (e) {
+      var $this = $(this);
+
+      if(!$form.is(':visible')){
+        $('html, body').animate({scrollTop: $("#quoteWrapper").offset().top}, 300);
+      }
+
+      $form.slideToggle('fast', function() {
+        $this.text($form.is(':visible') ? "Close form" : "I have a project");
+      });
+
+
+      e.preventDefault();
+    });
   },
   render : function(){
     return <section className="color1 slice" id="quoteWrapper">
@@ -13,17 +64,17 @@ export default React.createClass({
             <div className="col-md-9">
               <blockquote>Like what you see? <small>Request a proposal now!</small></blockquote>
             </div>
-            <div className="col-md-3"> <a className="btn btn-large" title="" href="#" id="quoteTrigger"> Get a quote!</a> </div>
+            <div className="col-md-3"> <a className="btn" title="" href="#" id="quoteTrigger"> Get a quote!</a> </div>
           </div>
           <div className="row">
             <div className="col-md-12" id="quoteFormWrapper">
-              <form id="projectQuote" method="post" action="js-plugin/neko-contact-ajax-plugin/php/form-handler-quotation.php">
+              <form className="clearfix"  id="projectQuote" method="post"action="js-plugin/neko-contact-ajax-plugin/php/form-handler-quotation.php">
                 <div className="row-fluid">
 
                   <div className="col-md-4">
                     <h3>Ask us about your projects</h3>
                     <p>
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam vel pulvinar ligula. Sed rutrum condimentum sapien vel facilisis. Proin pulvinar ultrices odio.
+                      Lorem ipsum dolor amet, consectetur adipiscing elit. Nam vel pulvinar ligula. Sed rutrum condimentum sapien vel facilisis. Proin pulvinar ultrices odio.
                     </p>
                   </div>
 
@@ -50,7 +101,7 @@ export default React.createClass({
                 <div className="row-fluid">
                   <div className="col-md-8 col-md-offset-4">
                     <div className="quoteResult pull-left"></div>
-                    <button className="btn btn-large pull-right" type="submit">Send</button>
+                    <button className="btn pull-right" type="submit">Send</button>
                   </div>
                 </div>
               </form>

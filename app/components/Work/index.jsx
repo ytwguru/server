@@ -22,7 +22,7 @@ export default React.createClass({
               <div className="portfolio-items isotopeWrapper clearfix imgHover" id="3">
                 <article className="boxLink boxNew col-md-4 isotopeItem women">
                   <section className="imgWrapper">
-                    <img alt="" src="./assets/images/portfolio/vign6.jpg" />
+                    <img className="img-responsive" alt="" src="./assets/images/portfolio/vign6.jpg" />
                   </section>
                   <div className="media-hover">
                     <div className="mask"></div>
@@ -48,7 +48,7 @@ export default React.createClass({
                 </article>
                 <article className="boxLink boxNew col-md-4 isotopeItem cats">
                   <section className="imgWrapper"> 
-                    <img alt="" src="./assets/images/portfolio/vign1.jpg" /> 
+                    <img className="img-responsive" alt="" src="./assets/images/portfolio/vign1.jpg" />
                   </section>
                   <div className="media-hover">
                     <div className="mask"></div>
@@ -75,7 +75,7 @@ export default React.createClass({
                 </article>
                 <article className="boxLink boxNew col-md-4 isotopeItem graphics">
                   <section className="imgWrapper">
-                    <img alt="" src="./assets/images/portfolio/vign7.jpg" />
+                    <img className="img-responsive" alt="" src="./assets/images/portfolio/vign7.jpg" />
                   </section>
                   <div className="media-hover">
                     <div className="mask"></div>
@@ -100,7 +100,7 @@ export default React.createClass({
                 </article>
                 <article className="boxLink boxNew col-md-4 isotopeItem cats">
                   <section className="imgWrapper">
-                    <img alt="" src="./assets/images/portfolio/vign3.jpg" />
+                    <img className="img-responsive" alt="" src="./assets/images/portfolio/vign3.jpg" />
                   </section>
                   <div className="media-hover">
                     <div className="mask"></div>
@@ -126,7 +126,7 @@ export default React.createClass({
                 </article>
                 <article className="boxLink boxNew col-md-4 isotopeItem cats">
                   <section className="imgWrapper">
-                    <img alt="" src="./assets/images/portfolio/vign2.jpg" />
+                    <img className="img-responsive" alt="" src="./assets/images/portfolio/vign2.jpg" />
                   </section>
                   <div className="media-hover">
                     <div className="mask"></div>
@@ -152,7 +152,7 @@ export default React.createClass({
                 </article>
                 <article className="boxLink boxNew col-md-4 isotopeItem women">
                   <section className="imgWrapper">
-                    <img alt="" src="./assets/images/portfolio/vign4.jpg" />
+                    <img className="img-responsive" alt="" src="./assets/images/portfolio/vign4.jpg" />
                   </section>
                   <div className="media-hover">
                     <div className="mask"></div>
@@ -178,7 +178,7 @@ export default React.createClass({
                 </article>
                 <article className="boxLink boxNew col-md-4 isotopeItem graphics">
                   <section className="imgWrapper">
-                    <img alt="" src="./assets/images/portfolio/vign8.jpg" />
+                    <img className="img-responsive" alt="" src="./assets/images/portfolio/vign8.jpg" />
                   </section>
                   <div className="media-hover">
                     <div className="mask"></div>
@@ -203,7 +203,7 @@ export default React.createClass({
                 </article>
                 <article className="boxLink boxNew col-md-4 isotopeItem women">
                   <section className="imgWrapper">
-                    <img alt="" src="./assets/images/portfolio/vign5.jpg" />
+                    <img className="img-responsive" alt="" src="./assets/images/portfolio/vign5.jpg" />
                   </section>
                   <div className="media-hover">
                     <div className="mask"></div>
@@ -229,7 +229,7 @@ export default React.createClass({
                 </article>
                 <article className="boxLink boxNew col-md-4 isotopeItem graphics">
                   <section className="imgWrapper">
-                    <img alt="" src="./assets/images/portfolio/vign9.jpg" />
+                    <img className="img-responsive" alt="" src="./assets/images/portfolio/vign9.jpg" />
                   </section>
                   <div className="media-hover">
                     <div className="mask"></div>
