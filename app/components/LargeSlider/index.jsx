@@ -13,26 +13,19 @@ export default React.createClass({
       wrapAround : true,
       imagesLoaded: true,
       setGallerySize: true,
-      lazyLoad: 1,
+      lazyLoad: 3,
+      resize : true,
+      contain: true,
       cellAlign: 'center'
     });
 
-    // load all lazy load images
-    if ( !flky.isActive ) {
-      $("#home").find('[data-flickity-lazyload]').each( function( i, elem  ) {
-        var $elem = $(elem);
-        $elem.attr( 'src', $elem.attr('data-flickity-lazyload') );
-        $elem.addClass('flickity-lazyloaded');
-        elem.removeAttribute('data-flickity-lazyload');
-      });
-    }
   },
   render : function(){
     return <div id="home">
       <div className="carousel" >
         <div className="carousel-cell">
           <section className = "imgWrapper">
-            <img src = "./assets/images/slider/super/placeholder.jpg"
+            <img data-src= "./assets/images/slider/super/placeholder.jpg"
               data-flickity-lazyload="./assets/images/slider/super/supersized-1.jpg" className="img-responsive" />
           </section>
         </div>
@@ -40,7 +33,7 @@ export default React.createClass({
       <div className="carousel">
         <div className="carousel-cell">
           <section className = "imgWrapper">
-            <img src = "./assets/images/slider/super/placeholder.jpg"
+            <img data-src= "./assets/images/slider/super/placeholder.jpg"
                  data-flickity-lazyload="./assets/images/slider/super/supersized-2.jpg" className="img-responsive" />
           </section>
         </div>
@@ -48,7 +41,7 @@ export default React.createClass({
       <div className="carousel">
         <div className="carousel-cell">
           <section className = "imgWrapper">
-            <img src = "./assets/images/slider/super/placeholder.jpg"
+            <img data-src= "./assets/images/slider/super/placeholder.jpg"
                  data-flickity-lazyload="./assets/images/slider/super/supersized-3.jpg" className="img-responsive" />
           </section>
         </div>
@@ -56,7 +49,7 @@ export default React.createClass({
       <div className="carousel">
         <div className="carousel-cell">
           <section className = "imgWrapper">
-            <img src = "./assets/images/slider/super/placeholder.jpg"
+            <img data-src= "./assets/images/slider/super/placeholder.jpg"
                  data-flickity-lazyload="./assets/images/slider/super/supersized-4.jpg" className="img-responsive" />
           </section>
         </div>
