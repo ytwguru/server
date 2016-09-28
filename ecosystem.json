@@ -24,7 +24,7 @@
       "path" : "/home/ubuntu/ytadvisors/website",
       "ssh_options": "StrictHostKeyChecking=no",
       "pre-deploy-local" : "echo 'This is a local executed command'",
-      "post-deploy" : "npm install --production && pm2 startOrRestart ecosystem.json --env production",
+      "post-deploy" : "npm install --production; NODE_ENV=production webpack; pm2 startOrReload ecosystem.json",
       "env"  : {
         "NODE_ENV": "production"
       }
