@@ -44,7 +44,7 @@ function getModule(){
       { test: /\.svg(\?.+)?$/, loader: 'url?limit=10000&mimetype=image/svg+xml'},
       { test: /\.png$/, loader: 'url-loader?mimetype=image/png'},
       { test: /\.gif$/, loader: 'url-loader?mimetype=image/gif'},
-      { test: /\.jpe?g$/, loader: 'url-loader?mimetype=image/jpeg'},git 
+      { test: /\.jpe?g$/, loader: 'url-loader?mimetype=image/jpeg'}, 
       { test : /\.json$/, loader : "json" },
       { test : /\.css$/, loader: ExtractTextPlugin.extract("style-loader", "css-loader") },
       { test : /\.less$/, loader: ExtractTextPlugin.extract("style-loader", "css-loader!less-loader") },
