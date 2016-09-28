@@ -6,7 +6,7 @@
   "scripts": {
     "test": "./node_modules/mocha/bin/mocha --compilers js:babel-core/register --require ./test/test.helper.spec.js 'test/**/*.@(js|jsx)'",
     "test:watch": "npm run test -- --watch --watch-extensions jsx",
-    "start": "NODE_ENV=production webpack; pm2 startOrReload ecosystem.json",
+    "start": "NODE_ENV=production webpack ; pm2 startOrReload ecosystem.json",
     "start:dev": "webpack; webpack-dev-server --port 8080 -d --progress --colors"
   },
   "repository": {
@@ -63,6 +63,7 @@
     "flickity": "^2.0.4",
     "google-fonts": "^1.0.0",
     "html5shiv": "^3.7.3",
+    "imagesloaded": "^4.1.1",
     "immutable": "^3.8.1",
     "isotope-layout": "^3.0.1",
     "jquery": "^2.2.4",
@@ -76,8 +77,6 @@
     "jquery.stellar": "^0.6.2",
     "masonry": "0.0.2",
     "masonry-layout": "^4.1.1",
-    "mustache": "^2.2.1",
-    "mustache-express": "^1.2.2",
     "node-uuid": "^1.4.7",
     "react": "^15.3.0",
     "react-addons-pure-render-mixin": "^15.3.0",

@@ -181,10 +181,7 @@ module.exports = [
     plugins: getPlugins(),
     node: {
       fs: "empty"
-    },
-    postcss: [
-      require('autoprefixer')
-    ]
+    }
   },
   {
     entry : {
@@ -199,9 +196,6 @@ module.exports = [
     resolve : getResolve(),
     devtool: 'source-map',
     plugins: getPlugins({isNode:true}),
-    externals : getExternals(),
-    postcss: [
-      require('autoprefixer')
-    ]
+    externals : getExternals()
   }
 ];
