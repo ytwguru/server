@@ -44,9 +44,9 @@ function getModule(){
       { test: /\.svg(\?.+)?$/, loader: 'url?limit=10000&mimetype=image/svg+xml'},
       { test: /\.png$/, loader: 'url-loader?mimetype=image/png'},
       { test: /\.gif$/, loader: 'url-loader?mimetype=image/gif'},
-      { test: /\.jpe?g$/, loader: 'url-loader?mimetype=image/jpeg'},
-      { test : /\.css$/, loader : "style!css"},
+      { test: /\.jpe?g$/, loader: 'url-loader?mimetype=image/jpeg'},git 
       { test : /\.json$/, loader : "json" },
+      { test : /\.css$/, loader: ExtractTextPlugin.extract("style-loader", "css-loader") },
       { test : /\.less$/, loader: ExtractTextPlugin.extract("style-loader", "css-loader!less-loader") },
       { test : /\.jsx?$/, exclude : /(node_modules)/, loader : "react-hot!babel"},
       { test: /\.modernizrrc$/, loader: "modernizr" }
