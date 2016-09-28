@@ -1,8 +1,6 @@
 "use strict";
 require('expose?$!expose?jQuery!jquery');
 
-import Modernizr from "./../.modernizrrc";
-
 export function initialize (){
   
   if(!Modernizr.input.placeholder){

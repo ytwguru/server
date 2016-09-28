@@ -13,16 +13,26 @@ export default React.createClass({
     return <nav className="arrowsNav">
       {((nav) => {
         if(nav.length > 1){
-          return <a href={nav[1].link} className={"navDown " + nav[1].color}>
-            <i className="icon-down-open">
-            </i>
-          </a>
+          return <div>
+            <a href={nav[1].link} className={"navDown " + nav[1].color}>
+              <i className="icon-down-open">
+              </i>
+            </a>
+            <a href={nav[0].link} className={"navUp " + nav[0].color}>
+              <i className="icon-up-open">
+              </i>
+            </a>
+          </div>;
+        } else {
+          return <div>
+            <a href={nav[0].link} className={"navUp navCentered " + nav[0].color}>
+              <i className="icon-up-open">
+              </i>
+            </a>
+          </div>;
         }
       })(nav)}
-      <a href={nav[0].link} className={"navUp " + nav[0].color}>
-        <i className="icon-up-open">
-        </i>
-      </a>
+
     </nav>;
 
   }

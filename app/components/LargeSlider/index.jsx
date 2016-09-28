@@ -1,13 +1,16 @@
 import "./LargeSlider.less";
 import React from 'react';
-import Flickity from "flickity";
+
+var Flickity = {};
+if (typeof(window) !== 'undefined') {
+  Flickity  = require("flickity");
+}
 
 export default React.createClass({
   componentDidMount : function (){
     var flky = new Flickity( '#home', {
       autoPlay : true,
-      adaptiveHeight : false,
-      setGallerySize : true,
+      adaptiveHeight : true,
       wrapAround : true,
       imagesLoaded: true,
       lazyLoad: 2,

@@ -1,10 +1,11 @@
+"use strict";
+
 require('expose?$!expose?jQuery!jquery');
 
 import "animate.css";
 import 'bootstrap/dist/css/bootstrap.css';
 import "flickity/dist/flickity.min.css"
 import "bootstrap/dist/js/bootstrap.js";
-import "./colors.less";
 import "jquery-validation";
 import "jquery-ui";
 import "jquery.scrollto";

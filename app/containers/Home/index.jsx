@@ -1,9 +1,13 @@
 import React from "react";
 import ReactDom from "react-dom";
+import "./Home.less";
 
 import "./../../assets/less/global.less";
 import "./../../assets/less/icons.less";
-import "./Home.less";
+import "./../../assets/less/colors.less";
+import "../../assets/fonts/custom-icons/css/custom-icons.css";
+import "../../assets/fonts/custom-icons/css/custom-icons-ie7.css";
+
 import Header from "../../components/Header";
 import Preloader from "../../components/Preloader";
 import LargeSlider from "../../components/LargeSlider";
@@ -16,13 +20,9 @@ import Quote from "../../components/Quote";
 import Team from "../../components/Team";
 import ContactUs from "../../components/ContactUs";
 import Footer from "../../components/Footer";
-import * as modernizrFactory from "../../factories/modernizr.factory";
-import * as prettyPhotoFactory from "../../factories/prettyPhoto.factory";
 
 export default React.createClass({
   componentDidMount : function(){
-    modernizrFactory.initialize();
-    prettyPhotoFactory.initialize();
     if($('.localscroll').length){
       $('.localscroll').localScroll({
         lazy: true,
@@ -77,7 +77,7 @@ export default React.createClass({
         break;
       case 1:
         data = {
-          id : "paralaxSlice2", icon : "icon-camera", text : "When your work speaks for itself, <br/> don't interrupt."
+          id : "paralaxSlice2", icon : "icon-camera", text : "Our work speaks for itself"
         };
         break;
       case 2:

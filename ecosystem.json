@@ -2,12 +2,13 @@
   "apps": [
     {
       "name": "advisors-website",
-      "script": "index.js",
-      "instances": 1,
-      "node_args" : [ "--max_old_space_size=1024" ],
-      "exec_mode": "fork",
-      "cwd" : "./app",
+      "script": "server.js",
+      "instances": 2,
+      "node_args" : ["--max_old_space_size=1024"],
+      "exec_mode": "cluster",
+      "cwd" : "./dist",
       "env"  : {
+        "DEBUG": "",
         "NODE_ENV": "production"
       }
     }
