@@ -54,6 +54,20 @@ function getModule(){
   };
 }
 
+function getTemplateDetails(){
+  if (process.env.NODE_ENV != "production") {
+    return {
+      template: "./app/views/index.html",
+      inject : "body"
+    };
+  } else {
+    return {
+      template: "./app/views/index.dist.html",
+      inject : "body"
+    };
+  }
+}
+
 /**
  * Get the plugins for webpack
  *
@@ -88,10 +102,7 @@ function getPlugins(options){
       new CopyWebpackPlugin([
         { from : "./**/*", context: './app/assets', to : "./assets" }
       ]),
-      new HtmlWebpackPlugin({
-        template: "./app/views/index.html",
-        inject : "body"
-      }),
+      new HtmlWebpackPlugin(getTemplateDetails()),
       new webpack.optimize.CommonsChunkPlugin({
         name : "vendor"
       }),

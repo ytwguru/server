@@ -44,7 +44,7 @@ export default React.createClass({
                 <article className="boxIcon">
                   <div className="iconWrapper iconBig"> <i className="icon-mobile-1"></i></div>
                   <section className="boxContent">
-                    <h2>Responsive design</h2>
+                    <h2>Mobile development</h2>
                     <p>Compatible with various desktop, tablet, and mobile devices.</p>
                   </section>
                 </article>

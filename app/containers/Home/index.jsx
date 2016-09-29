@@ -72,7 +72,7 @@ export default React.createClass({
     switch(section){
       case 0:
         data = {
-          id : "paralaxSlice1", icon : "icon-megaphone", text : "If you come to a fork in the road,<br/> take it.", color :"color4"
+          id : "paralaxSlice1", icon : "icon-megaphone", text : "Simplicity is the soul of efficiency.", color :"color4"
         };
         break;
       case 1:
