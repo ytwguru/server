@@ -8,7 +8,9 @@ export default React.createClass({
     /*$(window).on("load", function() {
 
     });*/
-    $('#preloader').delay(450).fadeOut('slow'); // will fade out the white DIV that covers the website.
+    $("#main-image").on("load", function(){
+      $('#preloader').delay(450).fadeOut('slow'); // will fade out the white DIV that covers the website.
+    });
   },
   render : function(){
     return <div className="preloader" id="preloader" >
