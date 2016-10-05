@@ -9,7 +9,7 @@ if (typeof(window) !== 'undefined') {
 export default React.createClass({
   componentDidMount : function (){
     var flky = new Flickity( '#home', {
-      autoPlay : true,
+      autoPlay : 5000,
       wrapAround : true,
       imagesLoaded: true,
       setGallerySize: true,
