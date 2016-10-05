@@ -9,7 +9,7 @@ export default React.createClass({
       <div className="container imgHover">
         <div className="row">
           <div className="col-md-12">
-            <h1>Latest news</h1>
+            <h1>Trending Topics</h1>
           </div>
           <article className="col-md-4">
             <section className="imgWrapper"> <img src="./assets/images/news/news1.jpg" alt="alteae template image news" /> </section>
@@ -22,7 +22,7 @@ export default React.createClass({
                   <h4>26</h4>
                   <span>Sep.</span> </section>
                 <section className="media-body">
-                  <h3>I feel good</h3>
+                  <h3>2016 Global Outsourcing</h3>
                   <p>Nullam sed tortor odio. Suspendisse tincidunt dictum nisi, nec convallis odio. </p>
                   <a href="blog-post.html" className="btn btn-small btn-inverse"><i className="icon-right-open-mini"></i>read more</a> </section>
               </div>
@@ -43,12 +43,13 @@ export default React.createClass({
                   <h4>15</h4>
                   <span>Aug.</span> </section>
                 <section className="media-body">
-                  <h3>I updated my facebook status</h3>
+                  <h3>Web design trends 2016</h3>
                   <p>Nullam sed tortor odio. Suspendisse tincidunt dictum nisi, nec convallis odio. </p>
                   <a href="blog-post.html" className="btn btn-small btn-inverse"><i className="icon-right-open-mini"></i>read more</a> </section>
               </div>
             </div>
           </article>
+
           <article className="col-md-4">
             <section className="imgWrapper"> <img src="./assets/images/news/news3.jpg" alt="snowflake template image news" /> </section>
             <div className="media-hover">
@@ -60,7 +61,7 @@ export default React.createClass({
                   <h4>05</h4>
                   <span>Aug.</span> </section>
                 <section className="media-body">
-                  <h3>I just got the new iPhone</h3>
+                  <h3>Using data analytics and big data.</h3>
                   <p>Nullam sed tortor odio. Suspendisse tincidunt dictum nisi, nec convallis odio. </p>
                   <a href="blog-post.html" className="btn btn-small btn-inverse"><i className="icon-right-open-mini"></i>read more</a> </section>
               </div>
