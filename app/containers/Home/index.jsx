@@ -48,13 +48,13 @@ export default React.createClass({
         break;
       case 2:
         data = [
-          { link : "#works", color : "color4"},
+          { link : "#news", color : "color4"},
           { link : "#team", color : "color1"}
         ];
         break;
       case 3:
         data = [
-          { link : "#works", color : "color2"},
+          { link : "#services", color : "color2"},
           { link : "#contactSlice", color : "color1"}
         ];
         break;
