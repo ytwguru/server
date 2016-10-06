@@ -63,7 +63,8 @@ export default React.createClass({
             <img data-src= "./assets/images/slider/super/placeholder.jpg"
                  data-flickity-lazyload="./assets/images/slider/super/supersized-4.jpg" className="img-responsive" />
             <div className = "content">
-              <h2>Image 4</h2>
+              <h2>Product management</h2>
+              <h3>Our experienced consultants will tailor solutions that deliver results.</h3>
             </div>
           </section>
         </div>
