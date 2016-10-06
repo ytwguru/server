@@ -72,12 +72,12 @@ export default React.createClass({
     switch(section){
       case 0:
         data = {
-          id : "paralaxSlice1", icon : "icon-megaphone", text : "Simplicity is the soul of efficiency.", color :"color4"
+          id : "paralaxSlice1", icon : "icon-megaphone", text : "Technology to grow your business.", color :"color4"
         };
         break;
       case 1:
         data = {
-          id : "paralaxSlice2", icon : "icon-camera", text : "Our work speaks for itself"
+          id : "paralaxSlice2", icon : "icon-camera", text : "Software that connects with your customers"
         };
         break;
       case 2:

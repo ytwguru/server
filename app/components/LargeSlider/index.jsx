@@ -14,7 +14,6 @@ export default React.createClass({
       imagesLoaded: true,
       setGallerySize: true,
       lazyLoad: 3,
-      resize : true,
       contain: true,
       cellAlign: 'center'
     });
@@ -41,7 +40,7 @@ export default React.createClass({
                  data-flickity-lazyload="./assets/images/slider/super/supersized-2.jpg" className="img-responsive" />
             <div className = "content">
               <h2>Custom software solutions</h2>
-              <h3>Whether you are a start-up or an established business, we are ready to assist you.</h3>
+              <h3>Whether you are a start-up or an established business, we create solutions to engage your customers.</h3>
             </div>
           </section>
         </div>
@@ -52,7 +51,8 @@ export default React.createClass({
             <img data-src= "./assets/images/slider/super/placeholder.jpg"
                  data-flickity-lazyload="./assets/images/slider/super/supersized-3.jpg" className="img-responsive" alt="Cyber security"/>
             <div className = "content">
-              <h2>Cyber Security - Modern security is hacker powered‎</h2>
+              <h2>Information Security‎</h2>
+              <h3>Address data security challenges in software, systems, and organizational processes.</h3>
             </div>
           </section>
         </div>
