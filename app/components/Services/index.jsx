@@ -17,7 +17,7 @@ export default React.createClass({
                 <article className="boxIcon">
                   <div className="iconWrapper iconBig"> <i className="icon-heart"></i></div>
                   <section className="boxContent">
-                    <h2>Clean design</h2>
+                    <h2>Product Development</h2>
                     <p>Elegant layouts that help you organize your content in the best way.</p>
                   </section>
                 </article>
@@ -26,7 +26,7 @@ export default React.createClass({
                 <article className="boxIcon">
                   <div className="iconWrapper iconBig"> <i className="icon-star-empty"></i></div>
                   <section className="boxContent">
-                    <h2>HTML5 &amp; CSS3</h2>
+                    <h2>Technology Consulting</h2>
                     <p>Built with modern technologies like HTML5 and CSS3, SEO optimised.</p>
                   </section>
                 </article>
@@ -35,7 +35,7 @@ export default React.createClass({
                 <article className="boxIcon">
                   <div className="iconWrapper iconBig"> <i className="icon-cog"></i></div>
                   <section className="boxContent">
-                    <h2>Easy Customization</h2>
+                    <h2>System Integration</h2>
                     <p>Clear code and documentation, build your website in no time!</p>
                   </section>
                 </article>
@@ -44,7 +44,7 @@ export default React.createClass({
                 <article className="boxIcon">
                   <div className="iconWrapper iconBig"> <i className="icon-mobile-1"></i></div>
                   <section className="boxContent">
-                    <h2>Mobile development</h2>
+                    <h2>Hosting & Support</h2>
                     <p>Compatible with various desktop, tablet, and mobile devices.</p>
                   </section>
                 </article>
