@@ -51,7 +51,7 @@ export default React.createClass({
             <img data-src= "./assets/images/slider/super/placeholder.jpg"
                  data-flickity-lazyload="./assets/images/slider/super/supersized-3.jpg" className="img-responsive" alt="Cyber security"/>
             <div className = "content">
-              <h2>Information Security‎</h2>
+              <h2>Information Security</h2>
               <h3>Address data security challenges in software, systems, and organizational processes.</h3>
             </div>
           </section>
