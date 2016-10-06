@@ -278,3 +278,7 @@
 .icon-clock-1:before { content: '\e802'; } /* '' */
 .icon-truck:before { content: '🚚'; } /* '\1f69a' */
 .icon-block:before { content: '🚫'; } /* '\1f6ab' */
+
+.icon-server:before { content: '\e902'; } /* '' */
+.icon-light-bulb:before { content: '\e904'; } /* '' */
+.icon-embed:before { content: '\e901'; } /* '' */

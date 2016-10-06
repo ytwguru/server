@@ -3,7 +3,29 @@ import React from "react";
 
 export default React.createClass({
   componentDidMount : function (){
-    
+    var $boxIcon = $('.boxIcon');
+    if($boxIcon.length){
+
+      $boxIcon.hover(function() {
+        var $this = $(this);
+        $this.addClass('hover');
+        $this.find('.iconWrapper i').addClass('triggeredHover');
+        $this.find('.boxContent>p')
+          .stop(true, false)
+          .css({'display': 'block'})
+          .animate({'margin-top': '0px'}, 300, function() {
+            // stuff to do after animation is complete
+          });
+
+      }, function() {
+        var $this = $(this);
+        $this.removeClass('hover');
+        $this.find('.iconWrapper i').removeClass('triggeredHover');
+        $this.find('.boxContent>p')
+          .stop(true, false)
+          .css({'display' : 'none', 'margin-top' : '250px'});
+      });
+    }
   },
   render : function(){
     return <div>
@@ -15,16 +37,16 @@ export default React.createClass({
               </div>
               <div className="col-md-3">
                 <article className="boxIcon">
-                  <div className="iconWrapper iconBig"> <i className="icon-heart"></i></div>
+                  <div className="iconWrapper iconBig"> <i className="icon-mobile-1"></i></div>
                   <section className="boxContent">
                     <h2>Product Development</h2>
-                    <p>Elegant layouts that help you organize your content in the best way.</p>
+                    <p>We design and develop web, mobile and desktop applications following a value-driven, iterative process.</p>
                   </section>
                 </article>
               </div>
               <div className="col-md-3">
                 <article className="boxIcon">
-                  <div className="iconWrapper iconBig"> <i className="icon-star-empty"></i></div>
+                  <div className="iconWrapper iconBig"> <i className="icon-light-bulb"></i></div>
                   <section className="boxContent">
                     <h2>Technology Consulting</h2>
                     <p>Built with modern technologies like HTML5 and CSS3, SEO optimised.</p>
@@ -33,7 +55,7 @@ export default React.createClass({
               </div>
               <div className="col-md-3">
                 <article className="boxIcon">
-                  <div className="iconWrapper iconBig"> <i className="icon-cog"></i></div>
+                  <div className="iconWrapper iconBig"> <i className="icon-star-empty"></i></div>
                   <section className="boxContent">
                     <h2>System Integration</h2>
                     <p>Clear code and documentation, build your website in no time!</p>
@@ -42,10 +64,10 @@ export default React.createClass({
               </div>
               <div className="col-md-3">
                 <article className="boxIcon">
-                  <div className="iconWrapper iconBig"> <i className="icon-mobile-1"></i></div>
+                  <div className="iconWrapper iconBig"> <i className="icon-server"></i></div>
                   <section className="boxContent">
                     <h2>Hosting & Support</h2>
-                    <p>Compatible with various desktop, tablet, and mobile devices.</p>
+                    <p>We setup production environments, oversee server security, perform daily backups and monitor performance.</p>
                   </section>
                 </article>
               </div>
