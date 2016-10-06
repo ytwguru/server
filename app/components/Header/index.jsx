@@ -29,7 +29,6 @@ export default React.createClass({
             <li className="active"><a href="#home">Home</a> </li>
             <li><a href="#news">News</a> </li>
             <li><a href="#services">Services</a> </li>
-            <li><a href="#works">Works</a> </li>
             <li><a href="#team">Team</a> </li>
             <li><a href="features.html">Features</a> </li>
             <li><a href="blog-home-sidebar-right.html">Blog</a> </li>

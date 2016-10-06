@@ -106,16 +106,12 @@ export default React.createClass({
         </MidBreaker>
         <Services>
         </Services>
-        <ArrowsNav data={this.getArrowNav(1)}>
-        </ArrowsNav>
-        <Work>
-        </Work>
-        <Quote>
-        </Quote>
         <ArrowsNav data={this.getArrowNav(2)}>
         </ArrowsNav>
         <MidBreaker data={this.getBreakerContent(1)}>
         </MidBreaker>
+        <Quote>
+        </Quote>
         <Team>
         </Team>
         <ArrowsNav data={this.getArrowNav(3)}>
