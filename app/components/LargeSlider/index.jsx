@@ -17,6 +17,7 @@ export default React.createClass({
       imagesLoaded: true,
       lazyLoad: 3,
       contain: true,
+      adaptiveHeight : true,
       cellAlign: 'center'
     });
     
