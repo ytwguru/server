@@ -28,8 +28,8 @@ export default React.createClass({
     }
   },
   render : function(){
-    return <div>
-        <section className="slice" id="services">
+    return <div id="services">
+        <section className="slice">
           <div className="container">
             <div className="row">
               <div className="col-md-12">
@@ -80,8 +80,19 @@ export default React.createClass({
             <div className="col-md-4"> <img className="img-responsive" src="./assets/images/theme-pics/services.png" alt="services" />
             </div>
             <div className="col-md-4">
-              <h2>Custom Applications Development</h2>
-              <p>You want a guarantee, buy a toaster. Dyin' ain't much of a livin', boy. You see, in this world there's two kinds of people, my friend: Those with loaded guns and those who dig. You dig. Are you feeling lucky punk This is my gun, Clyde! What you have to ask yourself is, do I feel lucky. Well do ya' punk? Are you feeling lucky punk.</p><p> When a naked man's chasing a woman through an alley with a butcher knife and a hard-on, I figure he's not out collecting for the Red Cross. Well, do you have anything to say for yourself? Dyin' ain't much of a livin', boy. Are you feeling lucky punk </p>
+              <h2>Custom Application Development</h2>
+              <p>
+                We design and develop software tailored to your specific demands in a way
+                that ultimately meets all your business goals, expectations, and requirements.
+              </p>
+              <p> Our applications are built using the latest in web and mobile technologies
+                solving your toughest problems and fitting seamlessly into your current processes
+                and systems, to produce measurable results for your business.
+              </p>
+              <p>
+                Along with full-cycle custom software development,
+                we provide software maintenance and platform-based customization.
+              </p>
               <a href="#" className="btn">read more</a> </div>
             <div className="col-md-4">
               <h2>Altea, a clean one page website template</h2>
