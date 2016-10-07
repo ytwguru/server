@@ -49,7 +49,7 @@ export default React.createClass({
                   <div className="iconWrapper iconBig"> <i className="icon-light-bulb"></i></div>
                   <section className="boxContent">
                     <h2>Technology Consulting</h2>
-                    <p>Built with modern technologies like HTML5 and CSS3, SEO optimised.</p>
+                    <p>We help teams understand trends, and security risks, and create road maps to reach development goals.</p>
                   </section>
                 </article>
               </div>
@@ -58,7 +58,7 @@ export default React.createClass({
                   <div className="iconWrapper iconBig"> <i className="icon-star-empty"></i></div>
                   <section className="boxContent">
                     <h2>System Integration</h2>
-                    <p>Clear code and documentation, build your website in no time!</p>
+                    <p>We create software integration with third party platforms.</p>
                   </section>
                 </article>
               </div>
