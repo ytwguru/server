@@ -58,7 +58,7 @@ export default React.createClass({
                   <div className="iconWrapper iconBig"> <i className="icon-star-empty"></i></div>
                   <section className="boxContent">
                     <h2>System Integration</h2>
-                    <p>We create software integration with third party platforms.</p>
+                    <p>We create software integration allowing companies to integrate with third party platforms.</p>
                   </section>
                 </article>
               </div>
@@ -80,7 +80,7 @@ export default React.createClass({
             <div className="col-md-4"> <img className="img-responsive" src="./assets/images/theme-pics/services.png" alt="services" />
             </div>
             <div className="col-md-4">
-              <h2>Choose your color, build your website, now!</h2>
+              <h2>Custom Applications Development</h2>
               <p>You want a guarantee, buy a toaster. Dyin' ain't much of a livin', boy. You see, in this world there's two kinds of people, my friend: Those with loaded guns and those who dig. You dig. Are you feeling lucky punk This is my gun, Clyde! What you have to ask yourself is, do I feel lucky. Well do ya' punk? Are you feeling lucky punk.</p><p> When a naked man's chasing a woman through an alley with a butcher knife and a hard-on, I figure he's not out collecting for the Red Cross. Well, do you have anything to say for yourself? Dyin' ain't much of a livin', boy. Are you feeling lucky punk </p>
               <a href="#" className="btn">read more</a> </div>
             <div className="col-md-4">
