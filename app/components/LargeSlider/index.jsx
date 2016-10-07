@@ -7,9 +7,6 @@ if (typeof(window) !== 'undefined') {
 }
 
 export default React.createClass({
-  resize : function(){
-    $(".flickity-viewport").css("height", $("#home").height() + "px");
-  },
   componentDidMount : function (){
     var flky = new Flickity( '#home', {
       autoPlay : 5000,
@@ -21,7 +18,6 @@ export default React.createClass({
       cellAlign: 'center'
     });
     
-    this.resize();
   },
   render : function(){
     return <div id="home">

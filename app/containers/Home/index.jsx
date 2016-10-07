@@ -23,10 +23,6 @@ import Footer from "../../components/Footer";
 
 export default React.createClass({
   componentDidMount : function(){
-    var $this = this;
-    $(window).on("resize", function(){
-      $this._slider.resize();
-    });
 
     if($('.localscroll').length){
       $('.localscroll').localScroll({
