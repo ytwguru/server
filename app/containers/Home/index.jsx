@@ -23,6 +23,11 @@ import Footer from "../../components/Footer";
 
 export default React.createClass({
   componentDidMount : function(){
+    var $this = this;
+    $(window).on("resize", function(){
+      $this._slider.resize();
+    });
+
     if($('.localscroll').length){
       $('.localscroll').localScroll({
         lazy: true,
@@ -96,7 +101,7 @@ export default React.createClass({
       <div id="globalWrapper" className="localscroll">
         <Header>
         </Header>
-        <LargeSlider>
+        <LargeSlider ref={(slider) => { this._slider = slider; }}>
         </LargeSlider>
         <News>
         </News>
