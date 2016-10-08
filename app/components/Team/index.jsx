@@ -14,12 +14,12 @@ export default React.createClass({
           </div>
           <div className="col-md-3">
             <article className="boxWrapper color1">
-              <div><img className="img-responsive" src="./assets/images/team/pic1.jpg" alt="" /></div>
+              <div><img className="img-responsive" src="./assets/images/team/yomi.gif" alt="" /></div>
               <div className="boxContent2">
-                <h3>Janet DOE </h3>
-                <p>Executive Director</p>
+                <h3>Yomi Toba </h3>
+                <p>Chief Executive Officer</p>
               </div>
-              <div className="boxContent"> <a href="mailto:your.email@little-neko.com">j.doe@altea.com</a>
+              <div className="boxContent"> <a href="mailto:yomi@ytadvisors.com">yomi@ytadvisors.com</a>
                 <ul className="socialNetwork">
                   <li><a href="#" className="tips" title="" data-original-title="follow me on Facebook"><i className="icon-facebook"></i></a></li>
                   <li><a href="#" className="tips" title="" data-original-title="follow me on Twitter"><i className="icon-twitter-bird"></i></a></li>
@@ -32,12 +32,12 @@ export default React.createClass({
           </div>
           <div className="col-md-3">
             <article className="boxWrapper color1">
-              <div><img className="img-responsive" src="./assets/images/team/pic2.jpg" alt="" /></div>
+              <div><img className="img-responsive" src="./assets/images/team/tanya.png" alt="" /></div>
               <div className="boxContent2">
-                <h3>Johanna Newsom</h3>
-                <p>Salesman</p>
+                <h3>Tanya Toba</h3>
+                <p>Chief Operating Officer</p>
               </div>
-              <div className="boxContent"> <a href="mailto:your.email@little-neko.com">j.newsom@altea.com</a>
+              <div className="boxContent"> <a href="mailto:tanya@ytadvisors.com">tanya@ytadvisors.com</a>
                 <ul className="socialNetwork">
                   <li><a href="#" className="tips" title="" data-original-title="follow me on Facebook"><i className="icon-facebook"></i></a></li>
                   <li><a href="#" className="tips" title="" data-original-title="follow me on Twitter"><i className="icon-twitter-bird"></i></a></li>
