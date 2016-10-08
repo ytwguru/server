@@ -58,7 +58,7 @@ export default React.createClass({
                   <div className="iconWrapper iconBig"> <i className="icon-star-empty"></i></div>
                   <section className="boxContent">
                     <h2>System Integration</h2>
-                    <p>We create software integration allowing companies to integrate with third party platforms.</p>
+                    <p>We create software integration solutions allowing companies to integrate with third party platforms.</p>
                   </section>
                 </article>
               </div>
@@ -95,8 +95,15 @@ export default React.createClass({
               </p>
               <a href="#" className="btn">read more</a> </div>
             <div className="col-md-4">
-              <h2>Altea, a clean one page website template</h2>
-              <p> We got no food we got no money and our pets heads are falling off! haaaaaaarry. It's because i'm green isn't it! it's because i'm green isn't it! Good morning, oh in case i don't see you, good afternoon, good evening and goodnight.</p><h3>hey, maybe i will give you a call sometime</h3><p> your number still 911? hey, maybe i will give you a call sometime. Your entrance was good, his was better. Look ma i'm road kill! </p>
+              <h2>Website Design</h2>
+              <p> We got no food we got no money and our pets heads are falling off! haaaaaaarry.
+                It's because i'm green isn't it! it's because i'm green isn't it! Good morning, oh in case
+                i don't see you, good afternoon, good evening and goodnight.
+              </p>
+              <h3>hey, maybe i will give you a call sometime</h3>
+              <p> your number still 911? hey, maybe i will give you a call sometime. Your entrance was good,
+                his was better. Look ma i'm road kill!
+              </p>
               <a href="#" className="btn">read more</a> </div>
           </div>
         </div>
