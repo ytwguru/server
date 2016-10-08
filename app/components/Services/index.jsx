@@ -29,7 +29,7 @@ export default React.createClass({
   },
   render : function(){
     return <div id="services">
-        <section className="slice">
+        <section className="slice no-bottom-padding">
           <div className="container">
             <div className="row">
               <div className="col-md-12">
@@ -96,13 +96,12 @@ export default React.createClass({
               <a href="#" className="btn">read more</a> </div>
             <div className="col-md-4">
               <h2>Website Design</h2>
-              <p> We got no food we got no money and our pets heads are falling off! haaaaaaarry.
-                It's because i'm green isn't it! it's because i'm green isn't it! Good morning, oh in case
-                i don't see you, good afternoon, good evening and goodnight.
+              <p> We develop responsive sites that provide the best user experience across devices, combining great design, form and function so
+                users can find the information they need quickly.  We leverage usability testing tools and techniques to understand how users interact
+                with your product to maximize user engagement and satisfaction.
               </p>
-              <h3>hey, maybe i will give you a call sometime</h3>
-              <p> your number still 911? hey, maybe i will give you a call sometime. Your entrance was good,
-                his was better. Look ma i'm road kill!
+              <h2>Working with Startups</h2>
+              <p> We quickly deploy an MVP for your new business with hand-crafted solutions that merge smart design, leading-edge technology and your unique business goals.
               </p>
               <a href="#" className="btn">read more</a> </div>
           </div>
