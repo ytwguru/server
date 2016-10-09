@@ -74,7 +74,9 @@ export default React.createClass({
                   <div className="col-md-4">
                     <h3>Ask us about your projects</h3>
                     <p>
-                      Lorem ipsum dolor amet, consectetur adipiscing elit. Nam vel pulvinar ligula. Sed rutrum condimentum sapien vel facilisis. Proin pulvinar ultrices odio.
+                      We begin every relationship with an in-depth discussion about the short and long-term desires for your project.
+                      Our engineers will review any hidden requirements and your existing codebase, if you have one. 
+                      When we know your goals and understand existing software, we are able to better ensure the success of the project.
                     </p>
                   </div>
 
@@ -88,9 +90,12 @@ export default React.createClass({
 
                     <select name="quoteType">
                       <option disabled defaultValue>Project Type</option>
-                      <option value="web project">web project</option>
-                      <option value="design project">design project</option>
-                      <option value="hosting project">hosting project</option>
+                      <option value="web project">Web Application</option>
+                      <option value="design project">Mobile Application</option>
+                      <option value="design project">Desktop Application</option>
+                      <option value="design project">Custom Development</option>
+                      <option value="design project">Integration Project</option>
+                      <option value="hosting project">Hosting Project</option>
                     </select>
 
                     <textarea name="comment" id="quoteComment" placeholder="message">
