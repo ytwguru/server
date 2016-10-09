@@ -35,7 +35,7 @@ export default React.createClass({
               <div><img className="img-responsive" src="./assets/images/team/tanya.png" alt="" /></div>
               <div className="boxContent2">
                 <h3>Tanya Toba</h3>
-                <p>Chief Operational Officer</p>
+                <p>Chief Marketing Officer</p>
               </div>
               <div className="boxContent"> <a href="mailto:tanya@ytadvisors.com">tanya@ytadvisors.com</a>
                 <ul className="socialNetwork">
