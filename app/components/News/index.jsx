@@ -24,7 +24,7 @@ export default React.createClass({
                 <section className="media-body">
                   <h3>2016 Global Outsourcing</h3>
                   <p>Nullam sed tortor odio. Suspendisse tincidunt dictum nisi, nec convallis odio. </p>
-                  <a href="blog-post.html" className="btn btn-small btn-inverse"><i className="icon-right-open-mini"></i>read more</a> </section>
+                  <a href="#" className="btn btn-small btn-inverse"><i className="icon-right-open-mini"></i>read more</a> </section>
               </div>
             </div>
           </article>
@@ -45,7 +45,7 @@ export default React.createClass({
                 <section className="media-body">
                   <h3>Web design trends 2016</h3>
                   <p>Nullam sed tortor odio. Suspendisse tincidunt dictum nisi, nec convallis odio. </p>
-                  <a href="blog-post.html" className="btn btn-small btn-inverse"><i className="icon-right-open-mini"></i>read more</a> </section>
+                  <a href="#" className="btn btn-small btn-inverse"><i className="icon-right-open-mini"></i>read more</a> </section>
               </div>
             </div>
           </article>
@@ -63,7 +63,7 @@ export default React.createClass({
                 <section className="media-body">
                   <h3>Using data analytics and big data.</h3>
                   <p>Nullam sed tortor odio. Suspendisse tincidunt dictum nisi, nec convallis odio. </p>
-                  <a href="blog-post.html" className="btn btn-small btn-inverse"><i className="icon-right-open-mini"></i>read more</a> </section>
+                  <a href="#" className="btn btn-small btn-inverse"><i className="icon-right-open-mini"></i>read more</a> </section>
               </div>
             </div>
           </article>

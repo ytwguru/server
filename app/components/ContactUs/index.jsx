@@ -242,7 +242,7 @@ export default React.createClass({
             </div>
             <div className="col-md-6">
 
-              <form method="post" action="js-plugin/neko-contact-ajax-plugin/php/form-handler.php" id="contactfrm">
+              <form method="post" action="#" id="contactfrm">
                 <label htmlFor="name"></label>
                 <input type="text" name="name" id="name" placeholder="Name"
                        title="Please enter your name (at least 2 characters)"/>
