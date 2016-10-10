@@ -242,7 +242,7 @@ export default React.createClass({
             </div>
             <div className="col-md-6">
 
-              <form method="post" action="#" id="contactfrm">
+              <form method="get" action="#" id="contactfrm">
                 <label htmlFor="name"></label>
                 <input type="text" name="name" id="name" placeholder="Name"
                        title="Please enter your name (at least 2 characters)"/>
