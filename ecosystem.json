@@ -2,7 +2,7 @@
   "apps": [
     {
       "name": "advisors-website",
-      "script": "server.js",
+      "script": "index.js",
       "instances": 2,
       "node_args" : ["--max_old_space_size=1024"],
       "exec_mode": "cluster",

@@ -1,5 +1,5 @@
 "use strict";
-require('dotenv').config({path : "./../.env", silent: true});
+require('dotenv').config({path : "./../../.env", silent: true});
 
 import Express from "express";
 
@@ -11,7 +11,7 @@ app.set("views", "client");
 app.use(Express.static('client'));
 
 app.get("/",  function(req, res){
-  res.render("index.html");
+  res.render("client/index.html");
 });
 
 console.log("Listening to => ", port );

@@ -13,8 +13,8 @@ var webpack = require('webpack'),
  */
 function getEntry(){
   var entries = {
-    app : ["./app/app.js"],
-    vendor : ["./app/vendor.js"]
+    app : ["./app/client/index.js"],
+    vendor : ["./app/client/vendor.js"]
   };
 
   if (process.env.NODE_ENV != "production") {
@@ -57,12 +57,12 @@ function getModule(){
 function getTemplateDetails(){
   if (process.env.NODE_ENV != "production") {
     return {
-      template: "./app/views/index.html",
+      template: "./app/client/views/index.html",
       inject : "body"
     };
   } else {
     return {
-      template: "./app/views/index.dist.html",
+      template: "./app/client/views/index.dist.html",
       inject : "body"
     };
   }
@@ -100,7 +100,7 @@ function getPlugins(options){
   else{
     plugins = [
       new CopyWebpackPlugin([
-        { from : "./**/*", context: './app/assets', to : "./assets" }
+        { from : "./**/*", context: './app/client/assets', to : "./assets" }
       ]),
       new HtmlWebpackPlugin(getTemplateDetails()),
       new webpack.optimize.CommonsChunkPlugin({
@@ -143,7 +143,7 @@ function getResolve(){
     extensions : ["", ".js", ".jsx", ".less", ".css"],
     modulesDirectories: ["node_modules"],
     alias: {
-      modernizr$: "./app/.modernizrrc",
+      modernizr$: "./app/client/.modernizrrc",
       masonry : "masonry-layout",
       isotope: 'isotope-layout',
       respond: 'respond.js/src/respond',
@@ -196,7 +196,7 @@ module.exports = [
   },
   {
     entry : {
-      server : ["./app/server.js"]
+      index : ["./app/server/index.js"]
     },
     output : {
       path : "./dist",

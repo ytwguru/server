@@ -5,8 +5,8 @@ import "./Home.less";
 import "./../../assets/less/global.less";
 import "./../../assets/less/icons.less";
 import "./../../assets/less/colors.less";
-import "../../assets/fonts/custom-icons/css/custom-icons.css";
-import "../../assets/fonts/custom-icons/css/custom-icons-ie7.css";
+import "./../../assets/fonts/custom-icons/css/custom-icons.css";
+import "./../../assets/fonts/custom-icons/css/custom-icons-ie7.css";
 
 import Header from "../../components/Header";
 import Preloader from "../../components/Preloader";
