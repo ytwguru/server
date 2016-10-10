@@ -68,7 +68,7 @@ export default React.createClass({
           </div>
           <div className="row">
             <div className="col-md-12" id="quoteFormWrapper">
-              <form className="clearfix"  id="projectQuote" method="post"action="js-plugin/neko-contact-ajax-plugin/php/form-handler-quotation.php">
+              <form className="clearfix"  id="projectQuote" method="get"action="#">
                 <div className="row-fluid">
 
                   <div className="col-md-4">
