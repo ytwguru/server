@@ -238,8 +238,7 @@ export default React.createClass({
             <div className="col-md-3"><a href="" title="" id="mapTriggerLoader">
               <div className="iconWrapper iconBig"><i className="icon-location"></i></div>
               <span className="clearfix">Click to see the map</span></a>
-              <p>Curabitur turpis orci, gravida non ornare id, venenatis nec enim. Praesent posuere condimentum leo eget
-                volutpat. .</p>
+              <p>For more information please submit an inquiry in the contact us form or send an email to sales@ytadvisors.com..</p>
             </div>
             <div className="col-md-6">
 
