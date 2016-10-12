@@ -24,8 +24,9 @@ import Footer from "../../components/Footer";
 export default React.createClass({
   componentDidMount : function(){
 
-    if($('.localscroll').length){
-      $('.localscroll').localScroll({
+    var $localScroll = $('.localscroll');
+    if($localScroll.length){
+      $localScroll.localScroll({
         lazy: true,
         lock: true,
         hash: false

@@ -1,59 +1,36 @@
 import "./Quote.less";
 import React from "react";
+import Formsy from 'formsy-react';
+import {TextInput, TextArea} from "./../Form";
 
 export default React.createClass({
-  componentDidMount : function(){
-    if (jQuery("#projectQuote").length) {
-      /*$("#projectQuote").validate({
-        // debug: true,
-        errorPlacement: function (error, element) {
-          error.insertBefore(element);
-        },
-        submitHandler: function (form) {
-          jQuery(form).ajaxSubmit({
-            target: ".quoteResult"
-          });
-        },
-        onkeyup: false,
-        rules: {
-          name: {
-            required: true,
-            minlength: 3
-          },
-          email: {
-            required: true,
-            email: true
-          },
-          company: {
-            required: true,
-            minlength: 2
-          },
-          quoteType: {
-            required: true
-          },
-          comment: {
-            required: true,
-            minlength: 10,
-            maxlength: 350
-          }
+  getInitialState : function(){
+    return { canSubmit : false };
+  },
+  enableButton : function () {
+    this.setState({ canSubmit : true });
+  },
 
-        }
-      });*/
-    }
+  disableButton : function(){
+    this.setState({ canSubmit : false });
+  },
+
+  submit : function(model){
+
+  },
+  componentDidMount : function(){
     var $form = $('#quoteFormWrapper');
     $('#quoteTrigger').click(function (e) {
+      e.preventDefault();
       var $this = $(this);
 
       if(!$form.is(':visible')){
-        $('html, body').animate({scrollTop: $("#quoteWrapper").offset().top}, 300);
+        $('html, body').animate({ scrollTop: $("#quoteWrapper").offset().top }, 300);
       }
 
       $form.slideToggle('fast', function() {
         $this.text($form.is(':visible') ? "Close form" : "I have a project");
       });
-
-
-      e.preventDefault();
     });
   },
   render : function(){
@@ -68,7 +45,8 @@ export default React.createClass({
           </div>
           <div className="row">
             <div className="col-md-12" id="quoteFormWrapper">
-              <form className="clearfix"  id="projectQuote" method="get"action="#">
+              <Formsy.Form className="clearfix"  id="projectQuote"
+                           onValidSubmit={this.submit} onValid={this.enableButton} onInvalid={this.disableButton}>
                 <div className="row-fluid">
 
                   <div className="col-md-4">
@@ -81,9 +59,14 @@ export default React.createClass({
                   </div>
 
                   <div className="col-md-4">
-                    <input type="text" id="inputName" className="col-md-5" placeholder="Name" name="name" />
-                    <input type="text" id="inputEmail" className="col-md-5" placeholder="Email" name="email" />
-                    <input type="text" id="inputCompany" className="col-md-5" placeholder="Company" name="company" />
+                    <TextInput id="inputName" placeholder="Name" name="name" required
+                          validations="maxLength:150"
+                    />
+                    <TextInput id="inputEmail" placeholder="Email" name="email"
+                           validations="isEmail" validationError="This is not a valid email" required
+                    />
+                    <TextInput id="inputCompany" placeholder="Company" name="company" required
+                               validations="maxLength:150" />
                   </div>
 
                   <div className="col-md-4">
@@ -98,18 +81,18 @@ export default React.createClass({
                       <option value="hosting project">Hosting Project</option>
                     </select>
 
-                    <textarea name="comment" id="quoteComment" placeholder="message">
-                    </textarea>
+                    <TextArea name="comment" id="quoteComment" placeholder="message" >
+                    </TextArea>
 
                   </div>
                 </div>
                 <div className="row-fluid">
                   <div className="col-md-8 col-md-offset-4">
                     <div className="quoteResult pull-left"></div>
-                    <button className="btn pull-right" type="submit">Send</button>
+                    <button className="btn pull-right" type="submit" disabled={!this.state.canSubmit}>Send</button>
                   </div>
                 </div>
-              </form>
+              </Formsy.Form>
 
             </div>
           </div>

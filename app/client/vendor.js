@@ -6,7 +6,6 @@ import "animate.css";
 import 'bootstrap/dist/css/bootstrap.css';
 import "flickity/dist/flickity.min.css"
 import "bootstrap/dist/js/bootstrap.js";
-import "jquery-validation";
 import "jquery-ui";
 import "jquery.scrollto";
 import "jquery.localscroll";

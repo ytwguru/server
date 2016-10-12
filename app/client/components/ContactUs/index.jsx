@@ -1,9 +1,25 @@
 import "./ContactUs.less";
 import React from "react";
 
+import Formsy from 'formsy-react';
+import {TextInput, TextArea} from "./../Form";
+
 export default React.createClass({
+  getInitialState : function(){
+    return { canSubmit : false };
+  },
+  enableButton : function () {
+    this.setState({ canSubmit : true });
+  },
+
+  disableButton : function(){
+    this.setState({ canSubmit : false });
+  },
+
+  submit : function(model){
+
+  },
   componentDidMount(){
-    this.initializeContactForm();
     this.initializeContactMap();
   },
   appendBootstrap: function () {
@@ -123,48 +139,6 @@ export default React.createClass({
       }
     }
   },
-  initializeContactForm: function () {
-    jQuery(function () {
-      "use strict";
-      if (jQuery("#contactfrm").length) {
-
-        /*$("#contactfrm").validate({
-          // debug: true,
-          errorPlacement: function (error, element) {
-            error.insertBefore(element);
-          },
-          submitHandler: function (form) {
-            jQuery(form).ajaxSubmit({
-              target: ".result"
-            });
-          },
-          onkeyup: false,
-          onclick: false,
-          rules: {
-            name: {
-              required: true,
-              minlength: 3
-            },
-            email: {
-              required: true,
-              email: true
-            },
-            phone: {
-              required: true,
-              minlength: 10,
-              digits: true
-            },
-            comment: {
-              required: true,
-              minlength: 10,
-              maxlength: 350
-            }
-          }
-        });*/
-      }
-
-    });
-  },
   initializeContactMap: function () {
 
     var $contact = $('#contactSlide'),
@@ -242,20 +216,19 @@ export default React.createClass({
             </div>
             <div className="col-md-6">
 
-              <form method="get" action="#" id="contactfrm">
-                <label htmlFor="name"></label>
-                <input type="text" name="name" id="name" placeholder="Name"
-                       title="Please enter your name (at least 2 characters)"/>
-                <label htmlFor="email"></label>
-                <input type="email" name="email" id="email" placeholder="Email"
-                       title="Please enter a valid email address"/>
-                <label htmlFor="phone"></label>
-                <input name="phone" type="tel" id="phone" size="30" value="" placeholder="Phone"
-                       className="required digits" title="Please enter a valid phone number (at least 10 characters)"/>
-                <label htmlFor="comments"></label>
-                  <textarea name="comment" id="comments" cols="3" rows="5" placeholder="Enter your message..."
-                            title="Please enter your message (at least 10 characters)">
-                  </textarea>
+              <Formsy.Form id="contactfrm"
+                           onValidSubmit={this.submit} onValid={this.enableButton} onInvalid={this.disableButton}>
+                <TextInput name="name" id="name" placeholder="Name" required
+                           validations="maxLength:150" />
+                <TextInput id="email" placeholder="Email" name="email"
+                           validations="isEmail" validationError="This is not a valid email" required
+                />
+                <TextInput name="name" id="phone" placeholder="Phone" required
+                           validations="maxLength:20" />
+
+                <TextArea name="comment" id="comments" placeholder="Enter your message..." cols="3" rows="5" >
+                </TextArea>
+
                 <fieldset className="clearfix securityCheck">
                   <legend>Security</legend>
                   <div className="row">
@@ -267,7 +240,7 @@ export default React.createClass({
                 <br />
                 <div className="result"></div>
                 <button name="submit" type="submit" className="btn" id="submit"> Submit</button>
-              </form>
+              </Formsy.Form>
 
 
             </div>
