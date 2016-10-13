@@ -3,6 +3,7 @@ import React from "react";
 
 import Formsy from 'formsy-react';
 import {TextInput, TextArea} from "./../Form";
+import {Alert} from "./../Modal";
 
 export default React.createClass({
   getInitialState : function(){
@@ -17,12 +18,12 @@ export default React.createClass({
   },
 
   submit : function(model, reset){
-    var $this = this;
     $.post("/api/contacts", model)
       .done( data => {
         console.log("Resetting");
         reset();
         $("#contactfrm").find("input[type=text], textarea").val("");
+        $("#contactUsModal").modal("show");
       });
   },
   componentDidMount(){
@@ -208,6 +209,10 @@ export default React.createClass({
     });
   },
   render: function () {
+    var alertData = {
+      header : "Message Sent",
+      message : "<p>We just received your message </p><p>A member of our team will get in touch with you soon.</p>"
+    };
     return <section className="slice color1" id="contactSlice">
       <div className="container">
         <div className="row mb40">
@@ -259,6 +264,7 @@ export default React.createClass({
           </div>
         </div>
       </div>
+      <Alert id="contactUsModal" data={alertData} />
     </section>;
   }
 });

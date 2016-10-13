@@ -2,6 +2,7 @@ import "./Quote.less";
 import React from "react";
 import Formsy from 'formsy-react';
 import {TextInput, TextArea, SelectOption} from "./../Form";
+import {Alert} from "./../Modal";
 
 export default React.createClass({
   getInitialState : function(){
@@ -15,19 +16,15 @@ export default React.createClass({
     this.setState({ canSubmit : false });
   },
 
-  resetForm: function () {
-    this.refs.form.reset();
-  },
-
   submit : function(model, reset){
     var $form = $('#quoteFormWrapper');
     $.post("/api/quotes", model)
       .done( data => {
-        console.log("Resetting");
         reset();
         $("#projectQuote").find("input[type=text], textarea").val("");
         $form.slideToggle('fast', function() {
           $('#quoteTrigger').text($form.is(':visible') ? "Close form" : "Get a quote");
+          $("#quoteModal").modal("show");
         });
       });
   },
@@ -48,6 +45,10 @@ export default React.createClass({
     });
   },
   render : function(){
+    var alertData = {
+      header : "Request Sent",
+      message : "<p>We just received your quote request. </p><p>A member of our team will get in touch with you soon.</p>"
+    };
     return <section className="color1 slice" id="quoteWrapper">
       <div className="container">
         <div className="ctaBox clearfix">
@@ -104,7 +105,6 @@ export default React.createClass({
                   <div className="col-md-8 col-md-offset-4">
                     <div className="quoteResult pull-left"></div>
                     <button className="btn pull-right" type="submit"
-                            data-toggle="modal" data-target="#quoteModal"
                             disabled={!this.state.canSubmit}>Send</button>
                   </div>
                 </div>
@@ -114,6 +114,7 @@ export default React.createClass({
           </div>
         </div>
       </div>
+      <Alert id="quoteModal" data={alertData} />
     </section>;
   }
 });
