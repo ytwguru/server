@@ -6,7 +6,7 @@
   "scripts": {
     "test": "./node_modules/mocha/bin/mocha --compilers js:babel-core/register --require ./test/test.helper.spec.js 'test/**/*.@(js|jsx)'",
     "test:watch": "npm run test -- --watch --watch-extensions jsx",
-    "start": "NODE_ENV=production webpack ; pm2 startOrReload ecosystem.json",
+    "start": "webpack ; pm2 startOrReload ecosystem.json",
     "start:dev": "webpack; webpack-dev-server --port 8080 -d --progress --colors"
   },
   "repository": {
@@ -56,6 +56,7 @@
     "animate.css": "^3.5.2",
     "autoprefixer": "^6.5.0",
     "blueimp-gallery": "^2.21.3",
+    "body-parser": "^1.15.2",
     "bootstrap": "^3.3.7",
     "debug": "^2.2.0",
     "express": "^4.14.0",
@@ -79,6 +80,7 @@
     "masonry": "0.0.2",
     "masonry-layout": "^4.1.1",
     "node-uuid": "^1.4.7",
+    "nodemailer": "^2.6.4",
     "react": "^15.3.0",
     "react-addons-pure-render-mixin": "^15.3.0",
     "react-addons-test-utils": "^15.3.0",
@@ -86,6 +88,7 @@
     "react-redux": "^4.4.5",
     "react-router": "^2.6.1",
     "redux": "^3.5.2",
+    "request": "^2.75.0",
     "script-loader": "^0.7.0",
     "smooth-scroll": "^0.1.4",
     "socket.io": "^1.4.8",

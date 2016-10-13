@@ -13,13 +13,16 @@ export default React.createClass({
   render : function(){
 
     const className = this.showRequired() ? "required" : this.showError() ? "error" : null;
-    const errorMessage = this.getErrorMessage();
+    var errorMessage = this.getErrorMessage();
+    if(!errorMessage)
+      errorMessage = "&nbsp;";
 
     return (
       <div className={className}>
         <input type = "text" onChange={this.changeValue} value={this.getValue()}
                placeholder={this.props.placeholder} id={this.props.id} />
-        <span>{errorMessage}</span>
+        <span dangerouslySetInnerHTML={{__html: errorMessage}}>
+        </span>
       </div>
     );
 

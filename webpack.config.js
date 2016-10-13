@@ -1,3 +1,5 @@
+require('dotenv').config({silent: true});
+
 var webpack = require('webpack'),
   CopyWebpackPlugin = require('copy-webpack-plugin'),
   HtmlWebpackPlugin = require("html-webpack-plugin"),
@@ -93,7 +95,8 @@ function getPlugins(options){
         }
       }),
       new webpack.DefinePlugin({
-        'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV)
+        'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV),
+        'process.env.SITE_PORT': JSON.stringify(process.env.SITE_PORT)
       })
     ];
   }
@@ -125,7 +128,8 @@ function getPlugins(options){
         }
       }),
       new webpack.DefinePlugin({
-        'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV)
+        'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV),
+        'process.env.SITE_PORT': JSON.stringify(process.env.SITE_PORT)
       })
     ];
   }

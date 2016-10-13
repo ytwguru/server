@@ -30,8 +30,8 @@ export default React.createClass({
             <li><a href="#news">News</a> </li>
             <li><a href="#services">Services</a> </li>
             <li><a href="#team">Team</a> </li>
-            <li><a href="features.html">Features</a> </li>
-            <li><a href="blog-home-sidebar-right.html">Blog</a> </li>
+            <li><a href="/features">Features</a> </li>
+            <li><a href="/blog">Blog</a> </li>
             <li><a href="#contactSlice">Contact</a> </li>
           </ul>
         </div>

@@ -1,4 +1,4 @@
-import "./TextArea.less";
+import "./SelectOption.less";
 import React from "react";
 import Formsy from "formsy-react";
 
@@ -6,7 +6,7 @@ export default React.createClass({
 
   mixins : [Formsy.Mixin],
 
-  
+
   changeValue : function(event){
     this.setValue(event.currentTarget.value);
   },
@@ -20,9 +20,9 @@ export default React.createClass({
 
     return (
       <div className={className}>
-        <textarea onChange={this.changeValue} placeholder={this.props.placeholder} id={this.props.id} value={this.getValue()}>
-
-        </textarea>
+        <select onChange={this.changeValue} name={this.props.name} value={this.getValue()}>
+          {this.props.children}
+        </select>
         <span dangerouslySetInnerHTML={{__html: errorMessage}}>
         </span>
       </div>

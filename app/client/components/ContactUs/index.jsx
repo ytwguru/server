@@ -16,8 +16,14 @@ export default React.createClass({
     this.setState({ canSubmit : false });
   },
 
-  submit : function(model){
-
+  submit : function(model, reset){
+    var $this = this;
+    $.post("/api/contacts", model)
+      .done( data => {
+        console.log("Resetting");
+        reset();
+        $("#contactfrm").find("input[type=text], textarea").val("");
+      });
   },
   componentDidMount(){
     this.initializeContactMap();
@@ -212,34 +218,24 @@ export default React.createClass({
             <div className="col-md-3"><a href="" title="" id="mapTriggerLoader">
               <div className="iconWrapper iconBig"><i className="icon-location"></i></div>
               <span className="clearfix">Click to see the map</span></a>
-              <p>For more information please submit an inquiry in the contact us form or send an email to sales@ytadvisors.com..</p>
+              <p>For more information please submit an inquiry in the contact us form or send an email to
+                <a href = "mailto:sales@ytadvisors.com">sales@ytadvisors.com</a>.</p>
             </div>
             <div className="col-md-6">
 
-              <Formsy.Form id="contactfrm"
+              <Formsy.Form id="contactfrm" ref="contactfrm" className="form"
                            onValidSubmit={this.submit} onValid={this.enableButton} onInvalid={this.disableButton}>
                 <TextInput name="name" id="name" placeholder="Name" required
                            validations="maxLength:150" />
                 <TextInput id="email" placeholder="Email" name="email"
                            validations="isEmail" validationError="This is not a valid email" required
                 />
-                <TextInput name="name" id="phone" placeholder="Phone" required
+                <TextInput name="phone" id="phone" placeholder="Phone" required
                            validations="maxLength:20" />
 
                 <TextArea name="comment" id="comments" placeholder="Enter your message..." cols="3" rows="5" >
                 </TextArea>
-
-                <fieldset className="clearfix securityCheck">
-                  <legend>Security</legend>
-                  <div className="row">
-                    <div className="col-md-6 pull-left humanCheck">
-                      <input className="required " id="verify" name="verify" type="text"/>
-                    </div>
-                  </div>
-                </fieldset>
-                <br />
-                <div className="result"></div>
-                <button name="submit" type="submit" className="btn" id="submit"> Submit</button>
+                <button name="submit" type="submit" className="btn" id="submit" disabled={!this.state.canSubmit}> Submit</button>
               </Formsy.Form>
 
 
