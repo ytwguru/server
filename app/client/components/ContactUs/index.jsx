@@ -218,8 +218,7 @@ export default React.createClass({
             <div className="col-md-3"><a href="" title="" id="mapTriggerLoader">
               <div className="iconWrapper iconBig"><i className="icon-location"></i></div>
               <span className="clearfix">Click to see the map</span></a>
-              <p>For more information please submit an inquiry in the contact us form or send an email to
-                 <a href = "mailto:sales@ytadvisors.com">sales@ytadvisors.com</a>.</p>
+              <p>For more information please submit an inquiry in the contact us form or send an email to&nbsp;<a href = "mailto:sales@ytadvisors.com">sales@ytadvisors.com</a>.</p>
             </div>
             <div className="col-md-6">
 
