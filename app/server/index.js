@@ -14,9 +14,9 @@ app.use(Express.static('client'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
-app.get("/",  function(req, res){
-  res.render("client/index.html");
-});
+app.use("/api/contacts", contacts);
+app.use("/api/quotes", quotes);
+
 
 app.get("/features",  function(req, res){
   res.render("client/features.html");
@@ -26,7 +26,9 @@ app.get("/blog",  function(req, res){
   res.render("client/blog.html");
 });
 
-app.use("/api/contacts", contacts);
-app.use("/api/quotes", quotes);
+app.get("/",  function(req, res){
+  res.render("client/index.html");
+});
+
 
 app.listen(port);
