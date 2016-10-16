@@ -9,7 +9,7 @@ export default React.createClass({
       <div className="container imgHover">
         <div className="row">
           <div className="col-md-12">
-            <h1>Trending News</h1>
+            <h1>Tech News</h1>
           </div>
           <article className="col-md-4">
             <section className="imgWrapper"> <img src="./assets/images/news/news1.jpg" alt="alteae template image news" /> </section>

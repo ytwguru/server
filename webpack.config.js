@@ -95,8 +95,12 @@ function getPlugins(options){
         }
       }),
       new webpack.DefinePlugin({
-        'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV),
-        'process.env.SITE_PORT': JSON.stringify(process.env.SITE_PORT)
+        'process.env':{
+          NODE_ENV : JSON.stringify(process.env.NODE_ENV),
+          SITE_PORT : JSON.stringify(process.env.SITE_PORT),
+          SUPPORT_EMAIL : JSON.stringify(process.env.SUPPORT_EMAIL),
+          SUPPORT_PASSWD : JSON.stringify(process.env.SUPPORT_PASSWD)
+        }
       })
     ];
   }
@@ -128,8 +132,12 @@ function getPlugins(options){
         }
       }),
       new webpack.DefinePlugin({
-        'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV),
-        'process.env.SITE_PORT': JSON.stringify(process.env.SITE_PORT)
+        'process.env':{
+          NODE_ENV : JSON.stringify(process.env.NODE_ENV),
+          SITE_PORT : JSON.stringify(process.env.SITE_PORT),
+          SUPPORT_EMAIL : JSON.stringify(process.env.SUPPORT_EMAIL),
+          SUPPORT_PASSWD : JSON.stringify(process.env.SUPPORT_PASSWD)
+        }
       })
     ];
   }
