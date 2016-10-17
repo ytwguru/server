@@ -19,7 +19,7 @@ function handleNewQuote(req, res) {
       name: "YT Advisors Support",
       type: "to"
     }],
-    subject: "New Quote Message",
+    subject: "New Quote Request",
     html: message
   })
     .then(function () {
