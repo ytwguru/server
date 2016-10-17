@@ -2,8 +2,8 @@
 
 @font-face {
   font-family: 'custom-icons';
-  src: url("../font/custom-icons.eot?49752937");
-  src: url("../font/custom-icons.eot?49752937#iefix") format('embedded-opentype'), url("../font/custom-icons.svg?49752937#custom-icons") format('svg');
+  src: url("http://cdn.ytadvisors.com/custom-icons.eot?49752937");
+  src: url("http://cdn.ytadvisors.com/custom-icons.eot?49752937#iefix") format('embedded-opentype'), url("http://cdn.ytadvisors.com/custom-icons.svg?49752937#custom-icons") format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -17,7 +17,7 @@
 @media screen and (-webkit-min-device-pixel-ratio:0) {
   @font-face {
     font-family: 'custom-icons';
-    src: url('../font/custom-icons.svg?49752937#custom-icons') format('svg');
+    src: url('http://cdn.ytadvisors.com/custom-icons.svg?49752937#custom-icons') format('svg');
   }
 }
 */

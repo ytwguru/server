@@ -12,7 +12,7 @@ export default React.createClass({
             <h1>Tech News</h1>
           </div>
           <article className="col-md-4">
-            <section className="imgWrapper"> <img src="./assets/images/news/news1.jpg" alt="alteae template image news" /> </section>
+            <section className="imgWrapper"> <img src="http://cdn.ytadvisors.com/images/news/news1.jpg" alt="alteae template image news" /> </section>
             <div className="media-hover">
               <div className="mask"></div>
             </div>
@@ -32,7 +32,7 @@ export default React.createClass({
 
           <article className="col-md-4">
             <section className="imgWrapper">
-              <img src="./assets/images/news/news2.jpg" alt="snowflake template image news" />
+              <img src="http://cdn.ytadvisors.com/images/news/news2.jpg" alt="snowflake template image news" />
             </section>
             <div className="media-hover">
               <div className="mask"></div>
@@ -51,7 +51,7 @@ export default React.createClass({
           </article>
 
           <article className="col-md-4">
-            <section className="imgWrapper"> <img src="./assets/images/news/news3.jpg" alt="snowflake template image news" /> </section>
+            <section className="imgWrapper"> <img src="http://cdn.ytadvisors.com/images/news/news3.jpg" alt="snowflake template image news" /> </section>
             <div className="media-hover">
               <div className="mask"></div>
             </div>

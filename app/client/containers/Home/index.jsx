@@ -2,11 +2,11 @@ import React from "react";
 import ReactDom from "react-dom";
 import "./Home.less";
 
-import "./../../assets/less/global.less";
-import "./../../assets/less/icons.less";
-import "./../../assets/less/colors.less";
-import "./../../assets/fonts/custom-icons/css/custom-icons.css";
-import "./../../assets/fonts/custom-icons/css/custom-icons-ie7.css";
+import "./../../less/global.less";
+import "./../../less/icons.less";
+import "./../../less/colors.less";
+import "./../../less/custom-icons/custom-icons.css";
+import "./../../less/custom-icons/custom-icons-ie7.css";
 
 import Header from "../../components/Header";
 import Preloader from "../../components/Preloader";
@@ -23,7 +23,6 @@ import Footer from "../../components/Footer";
 
 export default React.createClass({
   componentDidMount : function(){
-
     var $localScroll = $('.localscroll');
     if($localScroll.length){
       $localScroll.localScroll({

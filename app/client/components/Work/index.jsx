@@ -22,7 +22,7 @@ export default React.createClass({
               <div className="portfolio-items isotopeWrapper clearfix imgHover" id="3">
                 <article className="boxLink boxNew col-md-4 isotopeItem women">
                   <section className="imgWrapper">
-                    <img className="img-responsive" alt="" src="./assets/images/portfolio/vign6.jpg" />
+                    <img className="img-responsive" alt="" src="http://cdn.ytadvisors.com/images/portfolio/vign6.jpg" />
                   </section>
                   <div className="media-hover">
                     <div className="mask"></div>
@@ -31,7 +31,7 @@ export default React.createClass({
                         <i className="icon-picture">
                         </i>
                       </a>
-                      <a href="./assets/images/portfolio/zoom6.jpg" className="prettyPhoto iconWrapper" title="Zoom" >
+                      <a href="http://cdn.ytadvisors.com/images/portfolio/zoom6.jpg" className="prettyPhoto iconWrapper" title="Zoom" >
                         <i className="icon-search">
                         </i>
                       </a>
@@ -48,7 +48,7 @@ export default React.createClass({
                 </article>
                 <article className="boxLink boxNew col-md-4 isotopeItem cats">
                   <section className="imgWrapper"> 
-                    <img className="img-responsive" alt="" src="./assets/images/portfolio/vign1.jpg" />
+                    <img className="img-responsive" alt="" src="http://cdn.ytadvisors.com/images/portfolio/vign1.jpg" />
                   </section>
                   <div className="media-hover">
                     <div className="mask"></div>
@@ -75,7 +75,7 @@ export default React.createClass({
                 </article>
                 <article className="boxLink boxNew col-md-4 isotopeItem graphics">
                   <section className="imgWrapper">
-                    <img className="img-responsive" alt="" src="./assets/images/portfolio/vign7.jpg" />
+                    <img className="img-responsive" alt="" src="http://cdn.ytadvisors.com/images/portfolio/vign7.jpg" />
                   </section>
                   <div className="media-hover">
                     <div className="mask"></div>
@@ -100,7 +100,7 @@ export default React.createClass({
                 </article>
                 <article className="boxLink boxNew col-md-4 isotopeItem cats">
                   <section className="imgWrapper">
-                    <img className="img-responsive" alt="" src="./assets/images/portfolio/vign3.jpg" />
+                    <img className="img-responsive" alt="" src="http://cdn.ytadvisors.com/images/portfolio/vign3.jpg" />
                   </section>
                   <div className="media-hover">
                     <div className="mask"></div>
@@ -109,7 +109,7 @@ export default React.createClass({
                         <i className="icon-camera">
                         </i>
                       </a>
-                      <a href="#" className="prettyPhotoGallery iconWrapper animated flipOutX" title="Zoom" data-rel="./assets/images/slider/camera/camera-slide4.jpg,./assets/images/slider/camera/camera-slide5.jpg,./assets/images/slider/camera/camera-slide6.jpg">
+                      <a href="#" className="prettyPhotoGallery iconWrapper animated flipOutX" title="Zoom" data-rel="http://cdn.ytadvisors.com/images/slider/camera/camera-slide4.jpg,http://cdn.ytadvisors.com/images/slider/camera/camera-slide5.jpg,http://cdn.ytadvisors.com/images/slider/camera/camera-slide6.jpg">
                         <i className="icon-search">
                         </i>
                       </a>
@@ -126,7 +126,7 @@ export default React.createClass({
                 </article>
                 <article className="boxLink boxNew col-md-4 isotopeItem cats">
                   <section className="imgWrapper">
-                    <img className="img-responsive" alt="" src="./assets/images/portfolio/vign2.jpg" />
+                    <img className="img-responsive" alt="" src="http://cdn.ytadvisors.com/images/portfolio/vign2.jpg" />
                   </section>
                   <div className="media-hover">
                     <div className="mask"></div>
@@ -135,7 +135,7 @@ export default React.createClass({
                         <i className="icon-camera">
                         </i>
                       </a>
-                      <a href="./assets/images/portfolio/zoom2.jpg" className="prettyPhoto iconWrapper" title="Gallery Popup">
+                      <a href="http://cdn.ytadvisors.com/images/portfolio/zoom2.jpg" className="prettyPhoto iconWrapper" title="Gallery Popup">
                         <i className="icon-search">
                         </i>
                       </a>
@@ -152,7 +152,7 @@ export default React.createClass({
                 </article>
                 <article className="boxLink boxNew col-md-4 isotopeItem women">
                   <section className="imgWrapper">
-                    <img className="img-responsive" alt="" src="./assets/images/portfolio/vign4.jpg" />
+                    <img className="img-responsive" alt="" src="http://cdn.ytadvisors.com/images/portfolio/vign4.jpg" />
                   </section>
                   <div className="media-hover">
                     <div className="mask"></div>
@@ -161,7 +161,7 @@ export default React.createClass({
                         <i className="icon-videocam">
                         </i>
                       </a>
-                      <a href="./assets/images/portfolio/zoom4.jpg" className=" iconWrapper prettyPhoto" title="Zoom">
+                      <a href="http://cdn.ytadvisors.com/images/portfolio/zoom4.jpg" className=" iconWrapper prettyPhoto" title="Zoom">
                         <i className="icon-search">
                         </i>
                       </a>
@@ -178,7 +178,7 @@ export default React.createClass({
                 </article>
                 <article className="boxLink boxNew col-md-4 isotopeItem graphics">
                   <section className="imgWrapper">
-                    <img className="img-responsive" alt="" src="./assets/images/portfolio/vign8.jpg" />
+                    <img className="img-responsive" alt="" src="http://cdn.ytadvisors.com/images/portfolio/vign8.jpg" />
                   </section>
                   <div className="media-hover">
                     <div className="mask"></div>
@@ -187,7 +187,7 @@ export default React.createClass({
                         <i className="icon-camera">
                         </i>
                       </a>
-                      <a href="./assets/images/portfolio/zoom8.jpg" className="prettyPhoto iconWrapper" title="Zoom" >
+                      <a href="http://cdn.ytadvisors.com/images/portfolio/zoom8.jpg" className="prettyPhoto iconWrapper" title="Zoom" >
                         <i className="icon-search">
                         </i>
                       </a>
@@ -203,7 +203,7 @@ export default React.createClass({
                 </article>
                 <article className="boxLink boxNew col-md-4 isotopeItem women">
                   <section className="imgWrapper">
-                    <img className="img-responsive" alt="" src="./assets/images/portfolio/vign5.jpg" />
+                    <img className="img-responsive" alt="" src="http://cdn.ytadvisors.com/images/portfolio/vign5.jpg" />
                   </section>
                   <div className="media-hover">
                     <div className="mask"></div>
@@ -212,7 +212,7 @@ export default React.createClass({
                         <i className="icon-picture">
                         </i>
                       </a>
-                      <a href="./assets/images/portfolio/zoom5.jpg" className="prettyPhoto iconWrapper" title="Zoom" >
+                      <a href="http://cdn.ytadvisors.com/images/portfolio/zoom5.jpg" className="prettyPhoto iconWrapper" title="Zoom" >
                         <i className="icon-search">
                         </i>
                       </a>
@@ -229,7 +229,7 @@ export default React.createClass({
                 </article>
                 <article className="boxLink boxNew col-md-4 isotopeItem graphics">
                   <section className="imgWrapper">
-                    <img className="img-responsive" alt="" src="./assets/images/portfolio/vign9.jpg" />
+                    <img className="img-responsive" alt="" src="http://cdn.ytadvisors.com/images/portfolio/vign9.jpg" />
                   </section>
                   <div className="media-hover">
                     <div className="mask"></div>
@@ -238,7 +238,7 @@ export default React.createClass({
                         <i className="icon-camera">
                         </i>
                       </a>
-                      <a href="#" className="prettyPhotoGallery iconWrapper" title="Zoom" data-rel="./assets/images/portfolio2/ill_7_1.jpg,./assets/images/portfolio2/ill_7_2.jpg,./assets/images/portfolio2/ill_7_3.jpg">
+                      <a href="#" className="prettyPhotoGallery iconWrapper" title="Zoom" data-rel="http://cdn.ytadvisors.com/images/portfolio2/ill_7_1.jpg,http://cdn.ytadvisors.com/images/portfolio2/ill_7_2.jpg,http://cdn.ytadvisors.com/images/portfolio2/ill_7_3.jpg">
                         <i className="icon-search">
                         </i>
                       </a>

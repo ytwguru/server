@@ -24,8 +24,8 @@ export default React.createClass({
       <div className="carousel" >
         <div className="carousel-cell">
           <section className = "imgWrapper">
-            <img data-src= "./assets/images/slider/super/placeholder.jpg"
-              data-flickity-lazyload="./assets/images/slider/super/supersized-1.jpg" className="img-responsive" id = "main-image" alt="Women in business"/>
+            <img data-src= "http://cdn.ytadvisors.com/images/slider/super/placeholder.jpg"
+              data-flickity-lazyload="http://cdn.ytadvisors.com/images/slider/super/supersized-1.jpg" className="img-responsive" id = "main-image" alt="Women in business"/>
             <div className = "content">
               <h2>Professional software development</h2>
               <h3>We build custom web, mobile, and cross-platform solutions that keep you one step ahead of the competition.</h3>
@@ -36,8 +36,8 @@ export default React.createClass({
       <div className="carousel">
         <div className="carousel-cell">
           <section className = "imgWrapper">
-            <img data-src= "./assets/images/slider/super/placeholder.jpg"
-                 data-flickity-lazyload="./assets/images/slider/super/supersized-2.jpg" className="img-responsive" />
+            <img data-src= "http://cdn.ytadvisors.com/images/slider/super/placeholder.jpg"
+                 data-flickity-lazyload="http://cdn.ytadvisors.com/images/slider/super/supersized-2.jpg" className="img-responsive" />
             <div className = "content">
               <h2>Custom software solutions</h2>
               <h3>Whether you are a start-up or an established business, we create solutions to engage your customers.</h3>
@@ -48,8 +48,8 @@ export default React.createClass({
       <div className="carousel">
         <div className="carousel-cell">
           <section className = "imgWrapper">
-            <img data-src= "./assets/images/slider/super/placeholder.jpg"
-                 data-flickity-lazyload="./assets/images/slider/super/supersized-3.jpg" className="img-responsive" alt="Cyber security"/>
+            <img data-src= "http://cdn.ytadvisors.com/images/slider/super/placeholder.jpg"
+                 data-flickity-lazyload="http://cdn.ytadvisors.com/images/slider/super/supersized-3.jpg" className="img-responsive" alt="Cyber security"/>
             <div className = "content">
               <h2>Information Security</h2>
               <h3>Address data security challenges in software, systems, and organizational processes.</h3>
@@ -60,8 +60,8 @@ export default React.createClass({
       <div className="carousel">
         <div className="carousel-cell">
           <section className = "imgWrapper">
-            <img data-src= "./assets/images/slider/super/placeholder.jpg"
-                 data-flickity-lazyload="./assets/images/slider/super/supersized-4.jpg" className="img-responsive" />
+            <img data-src= "http://cdn.ytadvisors.com/images/slider/super/placeholder.jpg"
+                 data-flickity-lazyload="http://cdn.ytadvisors.com/images/slider/super/supersized-4.jpg" className="img-responsive" />
             <div className = "content">
               <h2>Product management</h2>
               <h3>Our experienced consultants will tailor solutions that deliver results.</h3>

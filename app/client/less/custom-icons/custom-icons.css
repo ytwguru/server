@@ -2,8 +2,8 @@
 
 @font-face {
   font-family: 'custom-icons';
-  src: url("../font/custom-icons.eot?42662965");
-  src: url("../font/custom-icons.eot?42662965#iefix") format('embedded-opentype'), url("../font/custom-icons.woff?42662965") format('woff'), url("../font/custom-icons.ttf?42662965") format('truetype'), url("../font/custom-icons.svg?42662965#custom-icons") format('svg');
+  src: url("http://cdn.ytadvisors.com/font/custom-icons.eot?42662965");
+  src: url("http://cdn.ytadvisors.com/font/custom-icons.eot?42662965#iefix") format('embedded-opentype'), url("http://cdn.ytadvisors.com/font/custom-icons.woff?42662965") format('woff'), url("http://cdn.ytadvisors.com/font/custom-icons.ttf?42662965") format('truetype'), url("http://cdn.ytadvisors.com/font/custom-icons.svg?42662965#custom-icons") format('svg');
   font-weight: normal;
   font-style: normal;
 }
