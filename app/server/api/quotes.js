@@ -12,7 +12,7 @@ function handleNewQuote(req, res) {
   
   var message = `<html><body>${content}</body></html>`;
   mailer.sendMail({
-    from_email: request.email,
+    from_email: "no-reply@ytadvisors.com",
     from_name: request.name,
     to: [{
       email: "support@ytadvisors.com",
