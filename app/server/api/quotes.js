@@ -23,7 +23,7 @@ function handleNewQuote(req, res) {
     html: message
   })
     .then(function () {
-      res.send({success: message});
+      res.send({success: true});
     })
     .catch(function (error) {
       res.send({
