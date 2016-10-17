@@ -15,9 +15,9 @@ function handleNewQuote(req, res) {
     from_email: request.email,
     from_name: request.name,
     to: [{
-      "email": "support@ytadvisors.com",
-      "name": "YT Advisors Support",
-      "type": "to"
+      email: "support@ytadvisors.com",
+      name: "YT Advisors Support",
+      type: "to"
     }],
     subject: "New Quote Message",
     html: message
