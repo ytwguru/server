@@ -3,15 +3,27 @@ import mailer from "./../lib/mailer";
 
 function handleNewContact(req, res) {
   var request = req.body;
-  var message = "New contact";
+  var content = "";
+  for(let key in req.body){
+    if(req.body.hasOwnProperty(key)){
+      content += `<p>${key} : ${req.body[key]}</p>`;
+    }
+  }
+
+  var message = `<html><body>${content}</body></html>`;
   mailer.sendMail({
-    from: request.email,
-    to: "support@ytadvisors.com",
+    from_email: request.email,
+    from_name: request.name,
+    to: [{
+      "email": "support@ytadvisors.com",
+      "name": "YT Advisors Support",
+      "type": "to"
+    }],
     subject: "New Contact Message",
     html: message
   })
     .then(function () {
-      res.send({success: true});
+      res.send({success: message});
     })
     .catch(function (error) {
       res.send({
@@ -21,12 +33,12 @@ function handleNewContact(req, res) {
     });
 }
 
-function handleGetQuote(req, res) {
+function handleGetContact(req, res) {
   res.send('respond with a quote resource. ' + JSON.stringify(process.env));
 }
 
 var router = Express.Router();
-router.get("/", handleGetQuote);
+router.get("/", handleGetContact);
 router.post("/", handleNewContact);
 
 export default router;

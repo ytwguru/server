@@ -99,7 +99,7 @@ function getPlugins(options){
           NODE_ENV : JSON.stringify(process.env.NODE_ENV),
           SITE_PORT : JSON.stringify(process.env.SITE_PORT),
           SUPPORT_EMAIL : JSON.stringify(process.env.SUPPORT_EMAIL),
-          SUPPORT_PASSWD : JSON.stringify(process.env.SUPPORT_PASSWD)
+          MANDRILL_API_KEY : JSON.stringify(process.env.MANDRILL_API_KEY)
         }
       })
     ];
@@ -136,7 +136,7 @@ function getPlugins(options){
           NODE_ENV : JSON.stringify(process.env.NODE_ENV),
           SITE_PORT : JSON.stringify(process.env.SITE_PORT),
           SUPPORT_EMAIL : JSON.stringify(process.env.SUPPORT_EMAIL),
-          SUPPORT_PASSWD : JSON.stringify(process.env.SUPPORT_PASSWD)
+          MANDRILL_API_KEY : JSON.stringify(process.env.MANDRILL_API_KEY)
         }
       })
     ];

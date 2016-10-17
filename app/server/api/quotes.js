@@ -3,15 +3,27 @@ import mailer from "./../lib/mailer";
 
 function handleNewQuote(req, res) {
   var request = req.body;
-  var message = "Hi Yomi";
+  var content = "";
+  for(let key in req.body){
+    if(req.body.hasOwnProperty(key)){
+      content += `<p>${key} : ${req.body[key]}</p>`;
+    }
+  }
+  
+  var message = `<html><body>${content}</body></html>`;
   mailer.sendMail({
-    from: request.email,
-    to: "support@ytadvisors.com",
-    subject: "I would like a quote",
+    from_email: request.email,
+    from_name: request.name,
+    to: [{
+      "email": "support@ytadvisors.com",
+      "name": "YT Advisors Support",
+      "type": "to"
+    }],
+    subject: "New Quote Message",
     html: message
   })
     .then(function () {
-      res.send({success: true});
+      res.send({success: message});
     })
     .catch(function (error) {
       res.send({
