@@ -88,6 +88,7 @@ export default React.createClass({
 
                     <SelectOption name = "quoteType" value="web app">
                       <option disabled >Project Type</option>
+                      <option value="website">Website</option>
                       <option value="web app">Web Application</option>
                       <option value="mobile app">Mobile Application</option>
                       <option value="desktop app">Desktop Application</option>
