@@ -99,7 +99,9 @@ function getPlugins(options){
           NODE_ENV : JSON.stringify(process.env.NODE_ENV),
           SITE_PORT : JSON.stringify(process.env.SITE_PORT),
           SUPPORT_EMAIL : JSON.stringify(process.env.SUPPORT_EMAIL),
-          MANDRILL_API_KEY : JSON.stringify(process.env.MANDRILL_API_KEY)
+          MANDRILL_API_KEY : JSON.stringify(process.env.MANDRILL_API_KEY),
+          GOOGLE_API_KEY : JSON.stringify(process.env.GOOGLE_API_KEY)
+          
         }
       })
     ];
