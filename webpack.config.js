@@ -108,9 +108,6 @@ function getPlugins(options){
   }
   else{
     plugins = [
-      new CopyWebpackPlugin([
-        { from : "./**/*", context: './app/client/assets', to : "./assets" }
-      ]),
       new HtmlWebpackPlugin(getTemplateDetails()),
       new webpack.optimize.CommonsChunkPlugin({
         name : "vendor"
