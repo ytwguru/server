@@ -4,7 +4,7 @@ import React from "react";
 export default React.createClass({
   componentDidMount : function (){
     var $boxIcon = $('.boxIcon');
-    if($boxIcon.length){
+    /*if($boxIcon.length){
 
       $boxIcon.hover(function() {
         var $this = $(this);
@@ -25,11 +25,11 @@ export default React.createClass({
           .stop(true, false)
           .css({'display' : 'none', 'margin-top' : '250px'});
       });
-    }
+    }*/
   },
   render : function(){
     return <div id="services">
-        <section className="slice no-bottom-padding">
+        <section className="slice no-bottom-padding color4">
           <div className="container">
             <div className="row">
               <div className="col-md-12">
@@ -74,10 +74,10 @@ export default React.createClass({
             </div>
           </div>
       </section>
-      <section className="slice color1">
+      <section className="slice">
         <div className="container">
           <div className="row">
-            <div className="col-md-4"> <img className="img-responsive" src="http://cdn.ytadvisors.com/images/theme-pics/services.png" alt="services" />
+            <div className="col-md-4"> <img className="img-responsive" src="http://cdn.ytadvisors.com/images/target.jpg" alt="services" />
             </div>
             <div className="col-md-4">
               <h2>Custom Application Development</h2>
@@ -93,7 +93,7 @@ export default React.createClass({
                 Along with full-cycle custom software development,
                 we provide software maintenance and platform-based customization.
               </p>
-              <a href="#" className="btn">read more</a> </div>
+            </div>
             <div className="col-md-4">
               <h2>Website Design</h2>
               <p> We develop responsive sites that provide the best user experience across devices, combining great design, form and function so
@@ -103,7 +103,7 @@ export default React.createClass({
               <h2>Working with Startups</h2>
               <p> We quickly deploy an MVP for your new business with hand-crafted solutions that merge smart design, leading-edge technology and your unique business goals.
               </p>
-              <a href="#" className="btn">read more</a> </div>
+            </div>
           </div>
         </div>
       </section>

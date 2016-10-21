@@ -43,7 +43,7 @@ export default React.createClass({
         break;
       case 1:
         data = [
-          { link : "#news", color : "color3"},
+          { link : "#home", color : "color3"},
           { link : "#paralaxSlice2", color : "color1"}
         ];
         break;
@@ -99,12 +99,6 @@ export default React.createClass({
         </Header>
         <LargeSlider ref={(slider) => { this._slider = slider; }}>
         </LargeSlider>
-        <News>
-        </News>
-        <ArrowsNav data={this.getArrowNav(0)}>
-        </ArrowsNav>
-        <MidBreaker data={this.getBreakerContent(0)}>
-        </MidBreaker>
         <Services>
         </Services>
         <ArrowsNav data={this.getArrowNav(2)}>

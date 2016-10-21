@@ -6,7 +6,7 @@ export default React.createClass({
 
   },
   render : function(){
-    return <section className="slice color1" id="team">
+    return <section className="slice color3" id="team">
       <div className="container">
         <div className="row">
           <div className="col-md-12">

@@ -10,8 +10,6 @@ export default React.createClass({
   },
 
   componentDidMount(){
-    this.handleOpenMap();
-    this.handleCloseMap();
   },
 
   enableButton : function () {
