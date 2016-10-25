@@ -1,4 +1,6 @@
 import "./Form.less";
-export {default as TextInput} from "./TextInput";
-export {default as TextArea} from "./TextArea";
-export {default as SelectOption} from "./SelectOption";
+import {default as TextInput} from "./TextInput";
+import {default as TextArea} from "./TextArea";
+import {default as SelectOption} from "./SelectOption";
+
+export {TextInput, TextArea, SelectOption};

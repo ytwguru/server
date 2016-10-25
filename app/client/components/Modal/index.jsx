@@ -1,4 +1,6 @@
 import "./Modal.less";
-export {default as Alert} from "./Alert";
-export {default as Confirm} from "./Confirm";
-export {default as Error} from "./Error";
+import {default as Alert} from "./Alert";
+import {default as Confirm} from "./Confirm";
+import {default as Error} from "./Error";
+
+export {Alert, Confirm, Error};
