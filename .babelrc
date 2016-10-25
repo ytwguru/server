@@ -3,7 +3,9 @@
     "es2015",
     "react"
   ],
-
+  "loose" : [
+    "es6.modules"
+  ],
   "env" : {
     "start" : {
       "presets" :[
