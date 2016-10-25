@@ -49,7 +49,7 @@ export default React.createClass({
                   </i>
                 </div>
               </div>
-              <p>For more information please submit an inquiry in the contact us form or send an email to&nbsp;<a href = "mailto:sales@ytadvisors.com">sales@ytadvisors.com</a>.</p>
+              <p>For more information please submit an inquiry in the contact us form or send an email to&nbsp;<a href = "mailto:support@ytadvisors.com">support@ytadvisors.com</a>.</p>
             </div>
             <div className="col-md-6">
               <Formsy.Form id="contactfrm" ref="contactfrm" className="form"
