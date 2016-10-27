@@ -17,7 +17,7 @@ export default React.createClass({
               <div><img className="img-responsive" src="http://cdn.ytadvisors.com/images/team/yomi.gif" alt="" /></div>
               <div className="boxContent2">
                 <h3>Yomi Toba </h3>
-                <p>Chief Executive Officer</p>
+                <p>Co-Founder / CEO</p>
               </div>
               <div className="boxContent"> <a href="mailto:yomi@ytadvisors.com">yomi@ytadvisors.com</a>
                 <ul className="socialNetwork">
@@ -35,7 +35,7 @@ export default React.createClass({
               <div><img className="img-responsive" src="http://cdn.ytadvisors.com/images/team/tanya.png" alt="" /></div>
               <div className="boxContent2">
                 <h3>Tanya Toba</h3>
-                <p>Chief Operating Officer</p>
+                <p>Co-Founder / COO</p>
               </div>
               <div className="boxContent"> <a href="mailto:tanya@ytadvisors.com">tanya@ytadvisors.com</a>
                 <ul className="socialNetwork">
