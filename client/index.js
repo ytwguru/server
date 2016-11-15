@@ -1,7 +1,7 @@
 "use strict";
 
 require('expose?$!expose?jQuery!jquery');
-require('dotenv').config({path : "./../../.env", silent: true});
+require('dotenv').config({path : "./../.env", silent: true});
 
 import Home from "./containers/Home"
 import React from "react";

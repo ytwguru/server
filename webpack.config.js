@@ -1,7 +1,6 @@
 require('dotenv').config({silent: true});
 
 var webpack = require('webpack'),
-  CopyWebpackPlugin = require('copy-webpack-plugin'),
   HtmlWebpackPlugin = require("html-webpack-plugin"),
   StatsPlugin = require('stats-webpack-plugin'),
   ExtractTextPlugin = require("extract-text-webpack-plugin"),
@@ -15,8 +14,8 @@ var webpack = require('webpack'),
  */
 function getEntry(){
   var entries = {
-    app : ["./app/client/index.js"],
-    vendor : ["./app/client/vendor.js"]
+    app : ["./client/index.js"],
+    vendor : ["./client/vendor.js"]
   };
 
   if (process.env.NODE_ENV != "production") {
@@ -59,12 +58,12 @@ function getModule(){
 function getTemplateDetails(){
   if (process.env.NODE_ENV != "production") {
     return {
-      template: "./app/client/views/index.html",
+      template: "./client/views/index.html",
       inject : "body"
     };
   } else {
     return {
-      template: "./app/client/views/index.dist.html",
+      template: "./client/views/index.dist.html",
       inject : "body"
     };
   }
@@ -75,71 +74,40 @@ function getTemplateDetails(){
  *
  * @returns {*[]}
  */
-function getPlugins(options){
-  options = options || {};
+function getPlugins(){
   var plugins;
-  if(options.isNode){
-    plugins = [
-      new webpack.DefinePlugin({'process.env.BROWSER': false }),
-      new webpack.BannerPlugin('require("source-map-support").install();',
-        { raw: true, entryOnly: false }),
-      new webpack.NormalModuleReplacementPlugin(/\.(css|less)$/, 'node-noop'),
-      new StatsPlugin('webpack.stats.json', {
-        source: false,
-        modules: false
-      }),
-      new webpack.optimize.UglifyJsPlugin({
-        compressor: {
-          warnings: false,
-          screw_ie8: true
-        }
-      }),
-      new webpack.DefinePlugin({
-        'process.env':{
-          NODE_ENV : JSON.stringify(process.env.NODE_ENV),
-          SITE_PORT : JSON.stringify(process.env.SITE_PORT),
-          SUPPORT_EMAIL : JSON.stringify(process.env.SUPPORT_EMAIL),
-          MANDRILL_API_KEY : JSON.stringify(process.env.MANDRILL_API_KEY),
-          GOOGLE_API_KEY : JSON.stringify(process.env.GOOGLE_API_KEY)
-          
-        }
-      })
-    ];
-  }
-  else{
-    plugins = [
-      new HtmlWebpackPlugin(getTemplateDetails()),
-      new webpack.optimize.CommonsChunkPlugin({
-        name : "vendor"
-      }),
-      new ExtractTextPlugin('[name]-[hash].min.css'),
-      new webpack.HotModuleReplacementPlugin(),
-      new webpack.ProvidePlugin({
-        $: "jquery",
-        jQuery: "jquery",
-        "window.jQuery": "jquery",
-        "window.$": "jquery"
-      }),
-      new StatsPlugin('webpack.stats.json', {
-        source: false,
-        modules: false
-      }),
-      new webpack.optimize.UglifyJsPlugin({
-        compressor: {
-          warnings: false,
-          screw_ie8: true
-        }
-      }),
-      new webpack.DefinePlugin({
-        'process.env':{
-          NODE_ENV : JSON.stringify(process.env.NODE_ENV),
-          SITE_PORT : JSON.stringify(process.env.SITE_PORT),
-          SUPPORT_EMAIL : JSON.stringify(process.env.SUPPORT_EMAIL),
-          MANDRILL_API_KEY : JSON.stringify(process.env.MANDRILL_API_KEY)
-        }
-      })
-    ];
-  }
+  plugins = [
+    new HtmlWebpackPlugin(getTemplateDetails()),
+    new webpack.optimize.CommonsChunkPlugin({
+      name : "vendor"
+    }),
+    new ExtractTextPlugin('[name]-[hash].min.css'),
+    new webpack.HotModuleReplacementPlugin(),
+    new webpack.ProvidePlugin({
+      $: "jquery",
+      jQuery: "jquery",
+      "window.jQuery": "jquery",
+      "window.$": "jquery"
+    }),
+    new StatsPlugin('webpack.stats.json', {
+      source: false,
+      modules: false
+    }),
+    new webpack.optimize.UglifyJsPlugin({
+      compressor: {
+        warnings: false,
+        screw_ie8: true
+      }
+    }),
+    new webpack.DefinePlugin({
+      'process.env':{
+        NODE_ENV : JSON.stringify(process.env.NODE_ENV),
+        SITE_PORT : JSON.stringify(process.env.SITE_PORT),
+        SUPPORT_EMAIL : JSON.stringify(process.env.SUPPORT_EMAIL),
+        MANDRILL_API_KEY : JSON.stringify(process.env.MANDRILL_API_KEY)
+      }
+    })
+  ];
   return plugins;
 }
 
@@ -154,7 +122,7 @@ function getResolve(){
     extensions : ["", ".js", ".jsx", ".less", ".css"],
     modulesDirectories: ["node_modules"],
     alias: {
-      modernizr$: "./app/client/.modernizrrc",
+      modernizr$: "./client/.modernizrrc",
       masonry : "masonry-layout",
       isotope: 'isotope-layout',
       respond: 'respond.js/src/respond',
@@ -175,25 +143,11 @@ function getDevServer(){
   };
 }
 
-function getExternals(){
-  var modules = {};
-  fs.readdirSync("node_modules")
-    .filter(function(x){
-      return [".bin"].indexOf(x) === -1;
-    })
-    .forEach(function(mod){
-      modules[mod] = "commonjs " + mod;
-    });
-
-  return modules;
-}
-
-
 module.exports = [
   {
     entry : getEntry(),
     output : {
-      path : "./dist/client",
+      path : "./dist",
       filename : "[name].js"
     },
     module : getModule(),
@@ -204,20 +158,5 @@ module.exports = [
     node: {
       fs: "empty"
     }
-  },
-  {
-    entry : {
-      index : ["./app/server/index.js"]
-    },
-    output : {
-      path : "./dist",
-      filename : "[name].js"
-    },
-    target: 'node',
-    module : getModule(),
-    resolve : getResolve(),
-    devtool: 'source-map',
-    plugins: getPlugins({isNode:true}),
-    externals : getExternals()
   }
 ];
