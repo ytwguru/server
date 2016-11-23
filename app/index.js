@@ -2,4 +2,4 @@
 
 require('babel-core/register');
 require('dotenv').config({path : "./../.env", silent: true});
-require("./index.js");
+require("./server.js");

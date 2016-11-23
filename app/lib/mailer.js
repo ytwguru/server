@@ -1,14 +1,13 @@
 import mandrill from "mandrill-api";
-import Q from "q";
 
 export default {
   _mailer : null,
-  getMailer : function(){
+  getMailer : () => {
     if(!this._mailer)
       this._mailer = new mandrill.Mandrill(process.env.MANDRILL_API_KEY);
     return this._mailer;
   },
-  sendMail : function (payload){
+  sendMail : (payload) => {
     this.validateObjectKeys(payload, ["from_email", "from_name", "to", "subject", "html"]);
     var message = {
       "html": payload.html,
@@ -22,19 +21,19 @@ export default {
       }
     };
 
-    var mailer = this.getMailer(),
-      deferred = Q.defer();
-
-    mailer.messages.send({message: message, async : false}, function(result){
-      deferred.resolve(result);
-    }, function(error){
-      deferred.reject(error);
+    var mailer = this.getMailer();
+    
+    return new Promise( (resolve, reject) => {
+      mailer.messages.send({message: message, async : false}, (result) => {
+        resolve(result);
+      }, (error) => {
+        reject(error);
+      });
     });
-
-    return deferred.promise;
   },
-  validateObjectKeys : function(obj, keys){
-    var errors = keys.filter(function (field) {
+
+  validateObjectKeys : (obj, keys) => {
+    var errors = keys.filter((field) => {
       if (!obj.hasOwnProperty(field)) {
         return field;
       }

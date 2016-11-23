@@ -1,13 +1,13 @@
 {
   "apps": [
     {
-      "name": "advisors-website",
-      "script": "app.js",
+      "name": "advisors-server",
+      "script": "index.js",
       "instances": 2,
       "next_gen_js" : true,
       "node_args" : ["--max_old_space_size=1024"],
       "exec_mode": "cluster",
-      "cwd" : "server"
+      "cwd" : "app"
     }
   ],
 
@@ -21,7 +21,7 @@
       "path" : "/home/ubuntu/ytadvisors/website",
       "ssh_options": "StrictHostKeyChecking=no",
       "pre-deploy-local" : "echo 'This is a local executed command'",
-      "post-deploy" : "npm install; webpack; pm2 startOrReload ecosystem.json"
+      "post-deploy" : "npm install; pm2 startOrReload ecosystem.json"
     }
   }
 }
