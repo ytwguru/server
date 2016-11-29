@@ -1,13 +1,13 @@
 {
   "apps": [
     {
-      "name": "advisors-server",
+      "name": "server",
       "script": "index.js",
       "instances": 2,
       "next_gen_js" : true,
       "node_args" : ["--max_old_space_size=1024"],
       "exec_mode": "cluster",
-      "cwd" : "app"
+      "cwd" : "src"
     }
   ],
 

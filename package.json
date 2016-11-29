@@ -1,13 +1,13 @@
 {
-  "name": "advisors-server",
-  "version": "0.0.0",
-  "description": "YT Advisors website",
+  "name": "server",
+  "version": "1.0.0",
+  "description": "YT Advisors API server",
   "main": "app/index.js",
   "repository": {
     "type": "git",
-    "url": "ssh://git@bitbucket.dev.pushup.com:7999/web/pushup-widgets.git"
+    "url": "git@github.com:ytwguru/server.git"
   },
-  "author": "Pushup Developers",
+  "author": "Yomi Toba",
   "license": "ISC",
   "dependencies": {
     "body-parser": "^1.15.2",
@@ -38,8 +38,8 @@
     "lint": "npm run eslint && npm run stylelint",
     "test": "./node_modules/mocha/bin/mocha --compilers js:babel-core/register --require ./test/test.helper.spec.js 'test/**/*.@(js|jsx)'",
     "test:watch": "npm run test -- --watch --watch-extensions jsx",
-    "publish": "pm2 deploy ecosystem.json production",
-    "start": "pm2 startOrReload ecosystem.json",
-    "start:dev": "node app/index.js"
+    "deploy": "pm2 deploy ecosystem.json production",
+    "build": "pm2 startOrReload ecosystem.json",
+    "start": "node src/index.js"
   }
 }
