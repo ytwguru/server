@@ -17,7 +17,7 @@
       "user" : "ubuntu",
       "host" : ["54.165.215.150"],
       "ref"  : "origin/master",
-      "repo" : "git@github.com:ytwguru/advisors-website.git",
+      "repo" : "git@github.com:ytwguru/server.git",
       "path" : "/home/ubuntu/ytadvisors/website",
       "ssh_options": "StrictHostKeyChecking=no",
       "pre-deploy-local" : "echo 'This is a local executed command'",
