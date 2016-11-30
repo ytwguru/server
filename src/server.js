@@ -1,4 +1,7 @@
 "use strict";
+
+require('dotenv').config({path : "./.env", silent: true});
+
 import Express from "express";
 import * as routes from "./routes";
 import bodyParser from "body-parser";

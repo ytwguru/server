@@ -1,5 +1,5 @@
-import {default as contacts} from "./contacts";
-import {default as quotes} from "./quotes";
+import contacts from "./contacts";
+import quotes from "./quotes";
 import Express from "express";
 
 var router = Express.Router();

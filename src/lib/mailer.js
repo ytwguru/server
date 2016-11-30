@@ -1,15 +1,22 @@
 import mandrill from "mandrill-api";
 
+function validateObjectKeys(obj, keys){
+  let errors = keys.filter((field) => {
+    if (!obj.hasOwnProperty(field)) {
+      return field;
+    }
+  });
+
+  if (errors.length > 0) {
+    throw new Error(errors.join(", ") + " : not set");
+  }
+  return true;
+}
+
 export default {
-  _mailer : null,
-  getMailer : () => {
-    if(!this._mailer)
-      this._mailer = new mandrill.Mandrill(process.env.MANDRILL_API_KEY);
-    return this._mailer;
-  },
   sendMail : (payload) => {
-    this.validateObjectKeys(payload, ["from_email", "from_name", "to", "subject", "html"]);
-    var message = {
+    validateObjectKeys(payload, ["from_email", "from_name", "to", "subject", "html"]);
+    let message = {
       "html": payload.html,
       "text": payload.html.replace(/(<([^>]+)>)/ig,""),
       "subject": payload.subject,
@@ -21,7 +28,7 @@ export default {
       }
     };
 
-    var mailer = this.getMailer();
+    let mailer = new mandrill.Mandrill(process.env.MANDRILL_API_KEY);
     
     return new Promise( (resolve, reject) => {
       mailer.messages.send({message: message, async : false}, (result) => {
@@ -30,20 +37,5 @@ export default {
         reject(error);
       });
     });
-  },
-
-  validateObjectKeys : (obj, keys) => {
-    var errors = keys.filter((field) => {
-      if (!obj.hasOwnProperty(field)) {
-        return field;
-      }
-    });
-
-    if (errors.length > 0) {
-      throw new Error(errors.join(", ") + " : not set");
-    }
-
-    return true;
   }
-
 }
