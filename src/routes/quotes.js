@@ -1,7 +1,11 @@
 import Express from "express";
 import mailer from "./../lib/mailer";
 
-var handleNewQuote = (req, res) =>{
+var router = Express.Router();
+
+router.get("/", (req, res) => res.send({ success : true, message  : "Get request"}));
+
+router.post("/", (req, res) =>{
   var request = req.body;
   var content = "";
   for(let key in req.body){
@@ -9,7 +13,7 @@ var handleNewQuote = (req, res) =>{
       content += `<p>${key} : ${req.body[key]}</p>`;
     }
   }
-  
+
   var message = `<html><body>${content}</body></html>`;
   mailer.sendMail({
     from_email: "no-reply@ytadvisors.com",
@@ -31,15 +35,6 @@ var handleNewQuote = (req, res) =>{
         error_description: error.message
       });
     });
-};
-
-var handleGetQuote = (req, res) => {
-  res.send({ success : true, message  : "Get request"});
-};
-
-var router = Express.Router();
-
-router.get("/", handleGetQuote);
-router.post("/", handleNewQuote);
+});
 
 export default router;

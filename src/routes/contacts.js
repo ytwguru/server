@@ -1,16 +1,19 @@
 import Express from "express";
 import mailer from "./../lib/mailer";
+let router = Express.Router();
 
-var handleNewContact = (req, res) => {
-  var request = req.body;
-  var content = "";
+router.get("/", (req, res) => res.send({ success : true, message  : "Get request"}));
+
+router.post("/", (req, res) => {
+  let request = req.body;
+  let content = "";
   for(let key in req.body){
     if(req.body.hasOwnProperty(key)){
       content += `<p>${key} : ${req.body[key]}</p>`;
     }
   }
 
-  var message = `<html><body>${content}</body></html>`;
+  let message = `<html><body>${content}</body></html>`;
   mailer.sendMail({
     from_email: "no-reply@ytadvisors.com",
     from_name: request.name,
@@ -31,14 +34,6 @@ var handleNewContact = (req, res) => {
         error_description: error.message
       });
     });
-};
-
-var handleGetContact = (req, res) => {
-  res.send({ success : true, message  : "Get request"});
-};
-
-var router = Express.Router();
-router.get("/", handleGetContact);
-router.post("/", handleNewContact);
+});
 
 export default router;

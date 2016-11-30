@@ -1,7 +1,6 @@
 "use strict";
 import Express from "express";
-import contacts from "./routes/contacts";
-import quotes from "./routes/quotes";
+import * as routes from "./routes";
 import bodyParser from "body-parser";
 import compression from "compression";
 
@@ -12,7 +11,8 @@ app.use(compression());
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
-app.use("/contacts", contacts);
-app.use("/quotes", quotes);
+app.use("/contacts", routes.contacts);
+app.use("/quotes", routes.quotes);
+app.use("/", routes.default);
 
 app.listen(port);
