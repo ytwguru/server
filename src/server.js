@@ -9,6 +9,7 @@ import compression from "compression";
 
 const port = process.env.SITE_PORT || 3000;
 const app = Express();
+const db = require("./models");
 
 app.use(compression());
 app.use(bodyParser.json());
@@ -29,7 +30,17 @@ app.use((req, res, next) => {
 });
 
 app.use("/contacts", routes.contacts);
+app.use("/customers", routes.customers);
 app.use("/quotes", routes.quotes);
 app.use("/", routes.default);
 
-app.listen(port);
+app.use(function(err, req, res, next) {
+  res.status(err.status || 400);
+  res.send({'error' :{
+    message: err.message
+  }});
+});
+
+db.sequelize.sync().then(function () {
+  app.listen(port);
+});
