@@ -36,11 +36,6 @@ router.post("/", (req, res, next) => {
   if(!request.amount)
     return next(new Error("No amount was sent to the server"));
 
-  //temp for testing
-  request.amount = 1000;
-  request.product = "Stripe integration payment test.";
-  request.ref = "000";
-
   stripe.customers.create({
     source : request.id,
     email : request.email
