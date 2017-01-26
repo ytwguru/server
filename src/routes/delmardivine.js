@@ -41,7 +41,7 @@ router.post("/contacts", (req, res) => {
       "name": to.name,
       "type": "to"
     }],
-    subject: "New Contact Message",
+    subject: "New Contact Message From DelmarDivine.com",
     html: message
   })
     .then(function () {
