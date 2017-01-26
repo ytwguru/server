@@ -33,8 +33,6 @@ router.post("/contacts", (req, res) => {
       break;
   }
   let message = `<html><body>${content}</body></html>`;
-  console.log("To", to);
-  console.log("message", message);
   mailer.sendMail({
     from_email: "no-reply@delmardivine.com",
     from_name: body.name,
