@@ -14,7 +14,7 @@ function validateObjectKeys(obj, keys){
 }
 
 export default {
-  sendMail : (payload) => {
+  sendMail : (payload, api_key) => {
     validateObjectKeys(payload, ["from_email", "from_name", "to", "subject", "html"]);
     let message = {
       "html": payload.html,
@@ -28,14 +28,17 @@ export default {
       }
     };
 
-    let mailer = new mandrill.Mandrill(process.env.MANDRILL_API_KEY);
-    
     return new Promise( (resolve, reject) => {
-      mailer.messages.send({message: message, async : false}, (result) => {
-        resolve(result);
-      }, (error) => {
-        reject(error);
-      });
+      if(!api_key)
+        reject(new Error("Mandrill API key not set"));
+      else {
+        let mailer = new mandrill.Mandrill(api_key);
+        mailer.messages.send({message: message, async : false}, (result) => {
+          resolve(result);
+        }, (error) => {
+          reject(error);
+        });
+      }
     });
   }
 }

@@ -25,7 +25,7 @@ router.post("/", (req, res) =>{
     }],
     subject: "New Quote Request",
     html: message
-  })
+  }, process.env.MANDRILL_API_KEY )
     .then(function () {
       res.send({success: true});
     })
