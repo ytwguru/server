@@ -34,7 +34,7 @@ router.post("/contacts", (req, res) => {
   }
   let message = `<html><body>${content}</body></html>`;
   mailer.sendMail({
-    from_email: "no-reply@delmardivine.com",
+    from_email: "no-reply@ytadvisors.com",
     from_name: body.name,
     to: [{
       "email": to.email,
@@ -43,7 +43,7 @@ router.post("/contacts", (req, res) => {
     }],
     subject: "New Contact Message",
     html: message
-  }, process.env.DELMARDEVINE_MANDRILL_API_KEY )
+  })
     .then(function () {
       res.send({success: true});
     })
