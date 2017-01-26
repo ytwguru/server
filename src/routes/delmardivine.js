@@ -8,11 +8,6 @@ router.get("/contacts", (req, res) => res.send({ success : true, message  : "Get
 router.post("/contacts", (req, res) => {
   let body = req.body;
   let content = "";
-  for(let key in body){
-    if(req.body.hasOwnProperty(key)){
-      content += `<p>${key} : ${body[key]}</p>`;
-    }
-  }
 
   let to = { email : "", name : "" };
   switch(body.contactType){
@@ -31,6 +26,13 @@ router.post("/contacts", (req, res) => {
     case "retail":
       to = { email : "retailleasing@delmardivine.com", name : "Retail Leasing" };
       break;
+  }
+  delete body.contactType;
+  
+  for(let key in body){
+    if(req.body.hasOwnProperty(key)){
+      content += `<p>${key} : ${body[key]}</p>`;
+    }
   }
   let message = `<html><body>${content}</body></html>`;
   mailer.sendMail({
