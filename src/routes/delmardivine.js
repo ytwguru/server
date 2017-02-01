@@ -56,11 +56,7 @@ router.post("/contacts", (req, res) => {
     to = defaultTo;
 
   let message = `<html><body>${content}</body></html>`;
-  console.log("Message:", message);
-  console.log("----END----");
-  console.log("To:", to);
-  console.log("----END----");
-  /*mailer.sendMail({
+  mailer.sendMail({
     from_email: "no-reply@ytadvisors.com",
     from_name: body.name,
     to: [{
@@ -79,7 +75,7 @@ router.post("/contacts", (req, res) => {
         success: false,
         error_description: error.message
       });
-    });*/
+    });
 });
 
 export default router;
