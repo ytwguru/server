@@ -10,9 +10,8 @@ router.post("/contacts", (req, res) => {
   let contact = body.contact;
   let content = "";
   let request = [];
-  let contactCounter = 0;
   let to = { email : "", name : "" };
-  let defaultTo = { email : "webmaster@delmardivine.com", name : "General Information" };
+  let defaultTo = { email : "info@delmardivine.com", name : "General Information" };
 
   for(let key in contact){
     if(contact.hasOwnProperty(key)){
