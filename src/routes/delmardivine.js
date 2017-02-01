@@ -7,35 +7,60 @@ router.get("/contacts", (req, res) => res.send({ success : true, message  : "Get
 
 router.post("/contacts", (req, res) => {
   let body = req.body;
+  let contact = body.contact;
   let content = "";
-
+  let request = [];
+  let contactCounter = 0;
   let to = { email : "", name : "" };
-  switch(body.contactType){
-    case "admin":
-      to = { email : "webmaster@delmardivine.com", name : "Webmaster Delmar Divine" };
-      break;
-    case "info":
-      to = { email : "info@delmardivine.com", name : "Info Delmar Divine" };
-      break;
-    case "apartment":
-      to = { email : "aptleasing@delmardivine.com", name : "Apt Leasing" };
-      break;
-    case "office":
-      to = { email : "officeleasing@delmardivine.com", name : "Office Leasing" };
-      break;
-    case "retail":
-      to = { email : "retailleasing@delmardivine.com", name : "Retail Leasing" };
-      break;
-  }
-  delete body.contactType;
-  
-  for(let key in body){
-    if(req.body.hasOwnProperty(key)){
-      content += `<p>${key} : ${body[key]}</p>`;
+  let defaultTo = { email : "webmaster@delmardivine.com", name : "General Information" };
+
+  for(let key in contact){
+    if(contact.hasOwnProperty(key)){
+      if(contact[key] === "true" || contact[key] === true){
+        switch(key){
+          case "admin":
+            to = { email : "webmaster@delmardivine.com", name : "Webmaster Delmar Divine" };
+            break;
+          case "info":
+            to = defaultTo;
+            break;
+          case "apartment":
+            to = { email : "aptleasing@delmardivine.com", name : "Apartment Leasing" };
+            break;
+          case "office":
+            to = { email : "officeleasing@delmardivine.com", name : "Office Leasing" };
+            break;
+          case "retail":
+            to = { email : "retailleasing@delmardivine.com", name : "Retail Leasing" };
+            break;
+          case "media":
+            to = { email : "maxine@delmardivine.com", name : "Media Inquiries" };
+            break;
+        }
+        request.push(to.name);
+      }
     }
   }
+
+  delete body.contact;
+
+  for(let key in body){
+    if(req.body.hasOwnProperty(key)){
+      content += `<p><strong>${key}</strong> : ${body[key]}</p>`;
+    }
+  }
+  content += "<p><strong>Requesting:</strong> </p>"
+  content += `<p>${request.join("</p><p>")}</p>`;
+
+  if(request.length > 1)
+    to = defaultTo;
+
   let message = `<html><body>${content}</body></html>`;
-  mailer.sendMail({
+  console.log("Message:", message);
+  console.log("----END----");
+  console.log("To:", to);
+  console.log("----END----");
+  /*mailer.sendMail({
     from_email: "no-reply@ytadvisors.com",
     from_name: body.name,
     to: [{
@@ -54,7 +79,7 @@ router.post("/contacts", (req, res) => {
         success: false,
         error_description: error.message
       });
-    });
+    });*/
 });
 
 export default router;
