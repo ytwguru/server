@@ -34,6 +34,7 @@ app.use("/customers", routes.customers);
 app.use("/quotes", routes.quotes);
 app.use("/delmardivine", routes.delmardivine);
 app.use("/independentyouth", routes.independentyouth);
+app.use("/africanchamberstl", routes.africanchamberstl);
 app.use("/", routes.default);
 
 app.use(function(err, req, res, next) {
