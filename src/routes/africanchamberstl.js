@@ -81,8 +81,8 @@ router.post("/contacts", (req, res) => {
     from_email: "no-reply@ytadvisors.com",
     from_name: request.name,
     to: [{
-      "email": "support@ytadvisors.com",
-      "name": "YT Advisors Support",
+      "email": "africanchamberstl@gmail.com",
+      "name": "African Chamber of Commerce STL",
       "type": "to"
     }],
     subject: "New Contact Message",
