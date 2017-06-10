@@ -9,9 +9,9 @@ const fs = require("fs"),
   port = process.env.MYSQL_PORT,
   host = process.env.MYSQL_HOST;
 
-var db = {};
+let db = {};
 
-var sequelize = new Sequelize(database, username, password, {
+let sequelize = new Sequelize(database, username, password, {
   host: host,
   dialect: "mysql",
   port: port,
@@ -23,7 +23,7 @@ fs.readdirSync(__dirname)
     return (file.indexOf(".") !== 0) && (file !== "index.js");
   })
   .forEach(function (file) {
-    var model = sequelize.import(path.join(__dirname, file));
+    let model = sequelize.import(path.join(__dirname, file));
     db[model.name] = model;
   });
 

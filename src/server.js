@@ -21,7 +21,7 @@ app.use((req, res, next) => {
   res.setHeader('Access-Control-Allow-Headers', 'Content-Type, Authorization, Content-Length, X-Requested-With');
 
   // intercept OPTIONS method
-  if ('OPTIONS' == req.method) {
+  if (req.method === 'OPTIONS') {
     res.send(200);
   }
   else {
@@ -35,6 +35,7 @@ app.use("/quotes", routes.quotes);
 app.use("/delmardivine", routes.delmardivine);
 app.use("/independentyouth", routes.independentyouth);
 app.use("/africanchamberstl", routes.africanchamberstl);
+app.use("/clarkfoxstl", routes.clarkfoxstl);
 app.use("/", routes.default);
 
 app.use(function(err, req, res, next) {
