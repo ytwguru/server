@@ -15,7 +15,7 @@
     "production" : {
       "key" : "/home/yomi/keys/ytadvisors/webserver.pem",
       "user" : "ubuntu",
-      "host" : ["54.165.215.150"],
+      "host" : ["34.201.243.34"],
       "ref"  : "origin/master",
       "repo" : "git@github.com:ytwguru/server.git",
       "path" : "/home/ubuntu/ytadvisors/website",
