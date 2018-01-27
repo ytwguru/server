@@ -7,7 +7,7 @@ import * as routes from "./routes";
 import bodyParser from "body-parser";
 import compression from "compression";
 
-const port = process.env.SITE_PORT || 8080;
+const port = process.env.SITE_PORT || 80;
 const app = Express();
 const db = require("./models");
 
