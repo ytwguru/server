@@ -2,7 +2,7 @@ require('dotenv').config({silent: true});
 
 import Express from "express";
 import validator from "validator";
-const models = require("./../models");
+//const models = require("./../models");
 //const sales = models.sales;
 import Stripe from "stripe";
 

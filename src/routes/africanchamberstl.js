@@ -5,7 +5,7 @@ import validator from "validator";
 import mailer from "./../lib/mailer";
 import Stripe from "stripe";
 
-const models = require("./../models");
+//const models = require("./../models");
 //const sales = models.sales;
 
 let router = Express.Router();
