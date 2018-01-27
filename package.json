@@ -52,8 +52,7 @@
     "lint": "npm run eslint && npm run stylelint",
     "test": "./node_modules/mocha/bin/mocha --compilers js:babel-core/register --require ./test/test.helper.spec.js 'test/**/*.@(js|jsx)'",
     "test:watch": "npm run test -- --watch --watch-extensions jsx",
-    "deploy": "pm2 deploy ecosystem.json production",
-    "build": "pm2 startOrReload ecosystem.json",
+    "deploy": "eb deploy",
     "start": "node src/index.js"
   }
 }
