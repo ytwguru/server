@@ -9,7 +9,6 @@ import compression from "compression";
 
 const port = process.env.SITE_PORT || 80;
 const app = Express();
-const db = require("./models");
 
 app.use(compression());
 app.use(bodyParser.json());
@@ -46,6 +45,4 @@ app.use(function(err, req, res, next) {
   }});
 });
 
-db.sequelize.sync().then(function () {
-  app.listen(port);
-});
+app.listen(port);
