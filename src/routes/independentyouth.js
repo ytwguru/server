@@ -3,7 +3,7 @@ require('dotenv').config({silent: true});
 import Express from "express";
 import validator from "validator";
 const models = require("./../models");
-const sales = models.sales;
+//const sales = models.sales;
 import Stripe from "stripe";
 
 let router = Express.Router();
@@ -51,6 +51,7 @@ router.post("/customers", (req, res, next) => {
   }))
   .then((charge) => {
     if(charge.paid){
+      return true;
       let salesData = getSalesData(charge, request);
       return sales.findOrCreate({
         where: { stripeId: salesData.stripeId},

@@ -6,7 +6,7 @@ import mailer from "./../lib/mailer";
 import Stripe from "stripe";
 
 const models = require("./../models");
-const sales = models.sales;
+//const sales = models.sales;
 
 let router = Express.Router();
 let key = process.env.NODE_ENV === "production" ? process.env.ACCSTL_STRIPE_KEY : process.env.ACCSTL_STRIPE_TEST_KEY;
@@ -53,6 +53,7 @@ router.post("/customers", (req, res, next) => {
   }))
   .then((charge) => {
     if(charge.paid){
+      return true;
       let salesData = getSalesData(charge, request);
       return sales.findOrCreate({
         where: { stripeId: salesData.stripeId},
