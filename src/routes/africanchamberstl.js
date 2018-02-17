@@ -9,6 +9,28 @@ let router = Express.Router();
 let key = process.env.NODE_ENV === "production" ? process.env.ACCSTL_STRIPE_KEY : process.env.ACCSTL_STRIPE_TEST_KEY;
 let stripe = Stripe(key);
 
+function sendMail(request){
+  let content = "";
+  for(let key in request){
+    if(request.hasOwnProperty(key)){
+      content += `<p>${key} : ${request[key]}</p>`;
+    }
+  }
+
+  let message = `<html><body>${content}</body></html>`;
+  return mailer.sendMail({
+    from_email: "no-reply@ytadvisors.com",
+    from_name: request.name,
+    to: [{
+      "email": "africanchamberstl@gmail.com",
+      "name": "African Chamber of Commerce STL",
+      "type": "to"
+    }],
+    subject: "New Registered Member",
+    html: message
+  })
+}
+
 router.get("/", (req, res) => res.send({ success : true, message  : "Get request"}));
 
 router.post("/customers", (req, res, next) => {
@@ -38,7 +60,7 @@ router.post("/customers", (req, res, next) => {
   }))
   .then((charge) => {
     if(charge.paid){
-      res.send({success: true})
+      res.send({success: true});
     }
     else {
       throw new Error(charge.failure_message);
@@ -48,26 +70,7 @@ router.post("/customers", (req, res, next) => {
 });
 
 router.post("/contacts", (req, res) => {
-  let request = req.body;
-  let content = "";
-  for(let key in req.body){
-    if(req.body.hasOwnProperty(key)){
-      content += `<p>${key} : ${req.body[key]}</p>`;
-    }
-  }
-
-  let message = `<html><body>${content}</body></html>`;
-  mailer.sendMail({
-    from_email: "no-reply@ytadvisors.com",
-    from_name: request.name,
-    to: [{
-      "email": "africanchamberstl@gmail.com",
-      "name": "African Chamber of Commerce STL",
-      "type": "to"
-    }],
-    subject: "New Contact Message",
-    html: message
-  })
+  sendMail(req.body)
     .then(function () {
       res.send({success: true});
     })
