@@ -6,7 +6,7 @@ import mailer from "./../lib/mailer";
 import Stripe from "stripe";
 
 let router = Express.Router();
-let key = process.env.NODE_ENV === "production" ? process.env.ACCSTL_STRIPE_KEY : process.env.ACCSTL_STRIPE_TEST_KEY;
+let key = process.env.ACCSTL_STRIPE_KEY;
 let stripe = Stripe(key);
 
 function sendMail(request){

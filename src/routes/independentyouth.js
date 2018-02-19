@@ -5,7 +5,7 @@ import validator from "validator";
 import Stripe from "stripe";
 
 let router = Express.Router();
-let key = process.env.NODE_ENV === "production" ? process.env.IY_STRIPE_KEY : process.env.IY_STRIPE_TEST_KEY;
+let key = process.env.IY_STRIPE_KEY;
 let stripe = Stripe(key);
 
 router.get("/", (req, res) => res.send({ success : true, message  : "Get request"}));
